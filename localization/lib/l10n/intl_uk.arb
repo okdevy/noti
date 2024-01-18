@@ -1,0 +1,23 @@
+{
+    "title": "Title",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "logIn": "Увійти",
+    "backToLogIn": "Back to logIn",
+    "register": "Register",
+    "resetPassword": "Reset password",
+    "email": "Email",
+    "emailInvalid": "Email is invalid",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot password ?",
+    "thisFieldIsRequired": "This field is required",
+    "invalidEmail": "Invalid email",
+    "couldNotConnectToInternet": "Couldn't connect to internet.",
+    "pleaseCheckYorNetworkSettings": "Please check yor network settings.",
+    "minimumLengthSymbols": "Minimum length {value} symbols",
+    "mustContainAtLeastOneLowercase": "Must contain at least one lowercase",
+    "mustContainAtLeastOneUppercase": "Must contain at least one uppercase",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "requiredField": "Required field"
+}
