@@ -1,0 +1,25 @@
+name: storybook
+description: The Storybook project.
+version: 1.0.0
+publish_to: 'none'
+
+environment:
+   sdk: ^3.2.0
+
+dependencies:
+  english_words: ^4.0.0
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  localization:
+    path: ../localization
+  storybook_flutter: ^0.14.0
+  ui:
+    path: ../ui
+
+dev_dependencies:
+  pro_lints: ^2.0.2
+
+flutter:
+  uses-material-design: true
