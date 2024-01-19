@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:async_redux/async_redux.dart';
 
 import '../../app_state.dart';
+import '../../session/actions/set_token_action.dart';
 import '../log_in_selectors.dart';
 import '../models/log_in_state.dart';
 
@@ -16,23 +17,27 @@ class LogInWithEmailAction extends ReduxAction<AppState> {
 
   @override
   Future<AppState> reduce() async {
-    final email = selectLogInEmail(state)!;
-    final password = selectLogInPassword(state)!;
+    final first = selectLogInFirst(state);
+    final second = selectLogInSecond(state);
+    final third = selectLogInThird(state);
+    final fourth = selectLogInFourth(state);
+    final time = selectLogInTime(state);
 
-    await _logInWithEmailRequest(
-      email: email,
-      password: password,
-    );
+    final input = '$first$second:$third$fourth';
+    final result = time == input;
+
+    if (!result) {
+      return state.copyWith.logIn(
+        isTimeWrong: true,
+        first: '',
+        second: '',
+        third: '',
+        fourth: '',
+      );
+    }
+
+    dispatchSync(SetTokenAction(value: 'token'));
 
     return state.copyWith(logIn: const LogInState());
   }
-}
-
-Future<void> _logInWithEmailRequest({
-  required String email,
-  required String password,
-}) async {
-  await Future<dynamic>.delayed(const Duration(seconds: 2));
-
-  throw const UserException('Not implemented yet.');
 }

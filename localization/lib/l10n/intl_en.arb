@@ -19,5 +19,8 @@
     "mustContainAtLeastOneLowercase": "Must contain at least one lowercase",
     "mustContainAtLeastOneUppercase": "Must contain at least one uppercase",
     "passwordsDoNotMatch": "Passwords do not match",
-    "requiredField": "Required field"
+    "requiredField": "Required field",
+    "logInDescription": "Enter current time in hh : mm format",
+    "confirm": "Confirm",
+    "theTimeIsWrongTryAgain": "The time is wrong. Try again."
 }

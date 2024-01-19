@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "backToLogIn": MessageLookupByLibrary.simpleMessage("Back to logIn"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "couldNotConnectToInternet": MessageLookupByLibrary.simpleMessage(
@@ -37,6 +38,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Forgot password ?"),
         "invalidEmail": MessageLookupByLibrary.simpleMessage("Invalid email"),
         "logIn": MessageLookupByLibrary.simpleMessage("Log in"),
+        "logInDescription": MessageLookupByLibrary.simpleMessage(
+            "Enter current time in hh : mm format"),
         "minimumLengthSymbols": m0,
         "mustContainAtLeastOneLowercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one lowercase"),
@@ -51,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "requiredField": MessageLookupByLibrary.simpleMessage("Required field"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "theTimeIsWrongTryAgain": MessageLookupByLibrary.simpleMessage(
+            "The time is wrong. Try again."),
         "thisFieldIsRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
         "title": MessageLookupByLibrary.simpleMessage("title")

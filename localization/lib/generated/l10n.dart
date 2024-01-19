@@ -259,6 +259,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Enter current time in hh : mm format`
+  String get logInDescription {
+    return Intl.message(
+      'Enter current time in hh : mm format',
+      name: 'logInDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The time is wrong. Try again.`
+  String get theTimeIsWrongTryAgain {
+    return Intl.message(
+      'The time is wrong. Try again.',
+      name: 'theTimeIsWrongTryAgain',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -19,5 +19,8 @@
     "mustContainAtLeastOneLowercase": "Must contain at least one lowercase",
     "mustContainAtLeastOneUppercase": "Must contain at least one uppercase",
     "passwordsDoNotMatch": "Passwords do not match",
-    "requiredField": "Required field"
+    "requiredField": "Required field",
+    "logInDescription": "Введіть поточний час у гг : хх форматі",
+    "confirm": "Підтвердити",
+    "theTimeIsWrongTryAgain": "Час неправильний, спробуйте ще раз."
 }
