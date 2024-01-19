@@ -16,8 +16,12 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$LogInState {
-  String? get email => throw _privateConstructorUsedError;
-  String? get password => throw _privateConstructorUsedError;
+  String? get first => throw _privateConstructorUsedError;
+  String? get second => throw _privateConstructorUsedError;
+  String? get third => throw _privateConstructorUsedError;
+  String? get fourth => throw _privateConstructorUsedError;
+  String? get time => throw _privateConstructorUsedError;
+  bool get isTimeWrong => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LogInStateCopyWith<LogInState> get copyWith =>
@@ -30,7 +34,13 @@ abstract class $LogInStateCopyWith<$Res> {
           LogInState value, $Res Function(LogInState) then) =
       _$LogInStateCopyWithImpl<$Res, LogInState>;
   @useResult
-  $Res call({String? email, String? password});
+  $Res call(
+      {String? first,
+      String? second,
+      String? third,
+      String? fourth,
+      String? time,
+      bool isTimeWrong});
 }
 
 /// @nodoc
@@ -46,18 +56,38 @@ class _$LogInStateCopyWithImpl<$Res, $Val extends LogInState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = freezed,
-    Object? password = freezed,
+    Object? first = freezed,
+    Object? second = freezed,
+    Object? third = freezed,
+    Object? fourth = freezed,
+    Object? time = freezed,
+    Object? isTimeWrong = null,
   }) {
     return _then(_value.copyWith(
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
+      first: freezed == first
+          ? _value.first
+          : first // ignore: cast_nullable_to_non_nullable
               as String?,
-      password: freezed == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
+      second: freezed == second
+          ? _value.second
+          : second // ignore: cast_nullable_to_non_nullable
               as String?,
+      third: freezed == third
+          ? _value.third
+          : third // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fourth: freezed == fourth
+          ? _value.fourth
+          : fourth // ignore: cast_nullable_to_non_nullable
+              as String?,
+      time: freezed == time
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isTimeWrong: null == isTimeWrong
+          ? _value.isTimeWrong
+          : isTimeWrong // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -70,7 +100,13 @@ abstract class _$$LogInStateImplCopyWith<$Res>
       __$$LogInStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? email, String? password});
+  $Res call(
+      {String? first,
+      String? second,
+      String? third,
+      String? fourth,
+      String? time,
+      bool isTimeWrong});
 }
 
 /// @nodoc
@@ -84,18 +120,38 @@ class __$$LogInStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = freezed,
-    Object? password = freezed,
+    Object? first = freezed,
+    Object? second = freezed,
+    Object? third = freezed,
+    Object? fourth = freezed,
+    Object? time = freezed,
+    Object? isTimeWrong = null,
   }) {
     return _then(_$LogInStateImpl(
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
+      first: freezed == first
+          ? _value.first
+          : first // ignore: cast_nullable_to_non_nullable
               as String?,
-      password: freezed == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
+      second: freezed == second
+          ? _value.second
+          : second // ignore: cast_nullable_to_non_nullable
               as String?,
+      third: freezed == third
+          ? _value.third
+          : third // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fourth: freezed == fourth
+          ? _value.fourth
+          : fourth // ignore: cast_nullable_to_non_nullable
+              as String?,
+      time: freezed == time
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isTimeWrong: null == isTimeWrong
+          ? _value.isTimeWrong
+          : isTimeWrong // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -103,16 +159,31 @@ class __$$LogInStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LogInStateImpl implements _LogInState {
-  const _$LogInStateImpl({this.email, this.password});
+  const _$LogInStateImpl(
+      {this.first,
+      this.second,
+      this.third,
+      this.fourth,
+      this.time,
+      this.isTimeWrong = false});
 
   @override
-  final String? email;
+  final String? first;
   @override
-  final String? password;
+  final String? second;
+  @override
+  final String? third;
+  @override
+  final String? fourth;
+  @override
+  final String? time;
+  @override
+  @JsonKey()
+  final bool isTimeWrong;
 
   @override
   String toString() {
-    return 'LogInState(email: $email, password: $password)';
+    return 'LogInState(first: $first, second: $second, third: $third, fourth: $fourth, time: $time, isTimeWrong: $isTimeWrong)';
   }
 
   @override
@@ -120,13 +191,18 @@ class _$LogInStateImpl implements _LogInState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LogInStateImpl &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.password, password) ||
-                other.password == password));
+            (identical(other.first, first) || other.first == first) &&
+            (identical(other.second, second) || other.second == second) &&
+            (identical(other.third, third) || other.third == third) &&
+            (identical(other.fourth, fourth) || other.fourth == fourth) &&
+            (identical(other.time, time) || other.time == time) &&
+            (identical(other.isTimeWrong, isTimeWrong) ||
+                other.isTimeWrong == isTimeWrong));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, email, password);
+  int get hashCode =>
+      Object.hash(runtimeType, first, second, third, fourth, time, isTimeWrong);
 
   @JsonKey(ignore: true)
   @override
@@ -136,13 +212,26 @@ class _$LogInStateImpl implements _LogInState {
 }
 
 abstract class _LogInState implements LogInState {
-  const factory _LogInState({final String? email, final String? password}) =
-      _$LogInStateImpl;
+  const factory _LogInState(
+      {final String? first,
+      final String? second,
+      final String? third,
+      final String? fourth,
+      final String? time,
+      final bool isTimeWrong}) = _$LogInStateImpl;
 
   @override
-  String? get email;
+  String? get first;
   @override
-  String? get password;
+  String? get second;
+  @override
+  String? get third;
+  @override
+  String? get fourth;
+  @override
+  String? get time;
+  @override
+  bool get isTimeWrong;
   @override
   @JsonKey(ignore: true)
   _$$LogInStateImplCopyWith<_$LogInStateImpl> get copyWith =>

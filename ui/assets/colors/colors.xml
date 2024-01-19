@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#6A84E4</color>
+    <color name="primary">#6A4DBA</color>
     <color name="secondary">#8bc34a</color>
     <color name="background">#FFFFFF</color>
     <color name="error">#FF1744</color>
     <color name="shade">#F0F0F0</color>
-    <color name="border">#e0e0e0</color>
+    <color name="border">#E6E6E6</color>
+    <color name="focusedBorder">#6A4DBA</color>
+    <color name="black">#1A1717</color>
+    <color name="subtitle">#747377</color>
+    <color name="colon">#B9B9B9</color>
+    <color name="mainRed">#F43528</color>
+    <color name="shadeNew">#F3F3F4</color>
 </resources>
