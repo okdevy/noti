@@ -4,6 +4,8 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:ui/pages/home_page.dart';
 
+import 'one_time_view_connector.dart';
+
 class HomePageConnector extends StatelessWidget {
   const HomePageConnector({
     super.key,
@@ -15,6 +17,10 @@ class HomePageConnector extends StatelessWidget {
         vm: () => _Factory(this),
         builder: (context, vm) => HomePage(
           isWaiting: vm.isWaiting,
+          oneTime: const OneTimeViewConnector(),
+          recurring: Container(
+            color: Colors.blue,
+          ),
         ),
       );
 }

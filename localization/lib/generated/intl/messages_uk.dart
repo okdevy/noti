@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addNewNotification":
+            MessageLookupByLibrary.simpleMessage("Додати нову нотифікацію"),
         "backToLogIn": MessageLookupByLibrary.simpleMessage("Back to logIn"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Підтвердити"),
@@ -40,24 +42,33 @@ class MessageLookup extends MessageLookupByLibrary {
         "logIn": MessageLookupByLibrary.simpleMessage("Увійти"),
         "logInDescription": MessageLookupByLibrary.simpleMessage(
             "Введіть поточний час у гг : хх форматі"),
+        "message": MessageLookupByLibrary.simpleMessage("Повідомлення: "),
         "minimumLengthSymbols": m0,
         "mustContainAtLeastOneLowercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one lowercase"),
         "mustContainAtLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one uppercase"),
+        "notifications": MessageLookupByLibrary.simpleMessage("Нотифікації"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "oneTime": MessageLookupByLibrary.simpleMessage("Одноразові"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
         "pleaseCheckYorNetworkSettings": MessageLookupByLibrary.simpleMessage(
             "Please check yor network settings."),
+        "recurring": MessageLookupByLibrary.simpleMessage("Повторювані"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "requiredField": MessageLookupByLibrary.simpleMessage("Required field"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "selectTrigger1":
+            MessageLookupByLibrary.simpleMessage("Виберіть тригер 1"),
+        "selectTrigger2":
+            MessageLookupByLibrary.simpleMessage("Виберіть тригер 2"),
         "theTimeIsWrongTryAgain": MessageLookupByLibrary.simpleMessage(
             "Час неправильний, спробуйте ще раз."),
         "thisFieldIsRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
+        "time": MessageLookupByLibrary.simpleMessage("Час: "),
         "title": MessageLookupByLibrary.simpleMessage("Title")
       };
 }

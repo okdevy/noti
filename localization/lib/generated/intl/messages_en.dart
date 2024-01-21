@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addNewNotification":
+            MessageLookupByLibrary.simpleMessage("Add new notification"),
         "backToLogIn": MessageLookupByLibrary.simpleMessage("Back to logIn"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
@@ -40,24 +42,33 @@ class MessageLookup extends MessageLookupByLibrary {
         "logIn": MessageLookupByLibrary.simpleMessage("Log in"),
         "logInDescription": MessageLookupByLibrary.simpleMessage(
             "Enter current time in hh : mm format"),
+        "message": MessageLookupByLibrary.simpleMessage("Message: "),
         "minimumLengthSymbols": m0,
         "mustContainAtLeastOneLowercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one lowercase"),
         "mustContainAtLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one uppercase"),
+        "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "oneTime": MessageLookupByLibrary.simpleMessage("One-time"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
         "pleaseCheckYorNetworkSettings": MessageLookupByLibrary.simpleMessage(
             "Please check yor network settings."),
+        "recurring": MessageLookupByLibrary.simpleMessage("Recurring"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "requiredField": MessageLookupByLibrary.simpleMessage("Required field"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "selectTrigger1":
+            MessageLookupByLibrary.simpleMessage("Select trigger 1"),
+        "selectTrigger2":
+            MessageLookupByLibrary.simpleMessage("Select trigger 2"),
         "theTimeIsWrongTryAgain": MessageLookupByLibrary.simpleMessage(
             "The time is wrong. Try again."),
         "thisFieldIsRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
+        "time": MessageLookupByLibrary.simpleMessage("Time: "),
         "title": MessageLookupByLibrary.simpleMessage("title")
       };
 }

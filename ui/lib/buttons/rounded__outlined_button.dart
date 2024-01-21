@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-class RoundedButton extends StatelessWidget {
-  const RoundedButton({
+class RoundedOutlinedButton extends StatelessWidget {
+  const RoundedOutlinedButton({
     required this.title,
     required this.onPressed,
     this.borderColor,
     this.backgroundColor,
     this.foregroundColor,
-    this.width = 500,
+    this.width = 92,
     this.height = 56,
     this.borderRadius = const BorderRadius.all(Radius.circular(12)),
     this.elevation = 0,
-    this.icon,
     super.key,
   });
 
@@ -23,12 +22,11 @@ class RoundedButton extends StatelessWidget {
   final BorderRadius borderRadius;
   final String title;
   final double elevation;
-  final Widget? icon;
   final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
-    final newStyle = ElevatedButton.styleFrom(
+    final newStyle = OutlinedButton.styleFrom(
       elevation: elevation,
       foregroundColor: foregroundColor,
       backgroundColor: backgroundColor,
@@ -36,7 +34,8 @@ class RoundedButton extends StatelessWidget {
         borderRadius: borderRadius,
       ),
       textStyle: const TextStyle(
-        fontSize: 16,
+        fontSize: 14,
+        height: 20 / 14,
         fontWeight: FontWeight.bold,
       ),
     );
@@ -45,21 +44,13 @@ class RoundedButton extends StatelessWidget {
       constraints: BoxConstraints(
         minHeight: height,
         maxHeight: height,
-        maxWidth: width,
-        minWidth: 200,
+        minWidth: width,
       ),
-      child: icon == null
-          ? ElevatedButton(
-              style: newStyle,
-              onPressed: onPressed,
-              child: Text(title),
-            )
-          : ElevatedButton.icon(
-              style: newStyle,
-              onPressed: onPressed,
-              icon: icon!,
-              label: Text(title),
-            ),
+      child: OutlinedButton(
+        style: newStyle,
+        onPressed: onPressed,
+        child: Text(title),
+      ),
     );
   }
 }

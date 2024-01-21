@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 
+import '../app_bar/base_app_bar.dart';
 import '../banners/error_banner.dart';
 import '../buttons/rounded_button.dart';
 import '../generated/colors.gen.dart';
@@ -74,15 +75,7 @@ class _LogInByTimePageState extends State<LogInByTimePage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(56),
-          child: AppBar(
-            title: Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: Text(S.current.logIn),
-            ),
-          ),
-        ),
+        appBar: BaseAppBar(title: S.current.logIn),
         body: Column(
           children: [
             Expanded(

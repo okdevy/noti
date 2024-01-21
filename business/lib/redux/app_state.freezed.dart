@@ -16,13 +16,17 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AppState {
+  Wait get wait => throw _privateConstructorUsedError;
   ConnectivityState get connectivity => throw _privateConstructorUsedError;
   LogInState get logIn => throw _privateConstructorUsedError;
   RegistrationState get registration => throw _privateConstructorUsedError;
   ForgotPasswordState get forgotPassword => throw _privateConstructorUsedError;
   ResetPasswordState get resetPassword => throw _privateConstructorUsedError;
   SessionState get session => throw _privateConstructorUsedError;
-  Wait get wait => throw _privateConstructorUsedError;
+  OneTimeNotificationsState get oneTimeNotifications =>
+      throw _privateConstructorUsedError;
+  CreateOneTimeNotificationState get createOneTimeNotification =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AppStateCopyWith<AppState> get copyWith =>
@@ -35,13 +39,15 @@ abstract class $AppStateCopyWith<$Res> {
       _$AppStateCopyWithImpl<$Res, AppState>;
   @useResult
   $Res call(
-      {ConnectivityState connectivity,
+      {Wait wait,
+      ConnectivityState connectivity,
       LogInState logIn,
       RegistrationState registration,
       ForgotPasswordState forgotPassword,
       ResetPasswordState resetPassword,
       SessionState session,
-      Wait wait});
+      OneTimeNotificationsState oneTimeNotifications,
+      CreateOneTimeNotificationState createOneTimeNotification});
 
   $ConnectivityStateCopyWith<$Res> get connectivity;
   $LogInStateCopyWith<$Res> get logIn;
@@ -49,6 +55,8 @@ abstract class $AppStateCopyWith<$Res> {
   $ForgotPasswordStateCopyWith<$Res> get forgotPassword;
   $ResetPasswordStateCopyWith<$Res> get resetPassword;
   $SessionStateCopyWith<$Res> get session;
+  $OneTimeNotificationsStateCopyWith<$Res> get oneTimeNotifications;
+  $CreateOneTimeNotificationStateCopyWith<$Res> get createOneTimeNotification;
 }
 
 /// @nodoc
@@ -64,15 +72,21 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? wait = null,
     Object? connectivity = null,
     Object? logIn = null,
     Object? registration = null,
     Object? forgotPassword = null,
     Object? resetPassword = null,
     Object? session = null,
-    Object? wait = null,
+    Object? oneTimeNotifications = null,
+    Object? createOneTimeNotification = null,
   }) {
     return _then(_value.copyWith(
+      wait: null == wait
+          ? _value.wait
+          : wait // ignore: cast_nullable_to_non_nullable
+              as Wait,
       connectivity: null == connectivity
           ? _value.connectivity
           : connectivity // ignore: cast_nullable_to_non_nullable
@@ -97,10 +111,14 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
           ? _value.session
           : session // ignore: cast_nullable_to_non_nullable
               as SessionState,
-      wait: null == wait
-          ? _value.wait
-          : wait // ignore: cast_nullable_to_non_nullable
-              as Wait,
+      oneTimeNotifications: null == oneTimeNotifications
+          ? _value.oneTimeNotifications
+          : oneTimeNotifications // ignore: cast_nullable_to_non_nullable
+              as OneTimeNotificationsState,
+      createOneTimeNotification: null == createOneTimeNotification
+          ? _value.createOneTimeNotification
+          : createOneTimeNotification // ignore: cast_nullable_to_non_nullable
+              as CreateOneTimeNotificationState,
     ) as $Val);
   }
 
@@ -151,6 +169,24 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
       return _then(_value.copyWith(session: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $OneTimeNotificationsStateCopyWith<$Res> get oneTimeNotifications {
+    return $OneTimeNotificationsStateCopyWith<$Res>(_value.oneTimeNotifications,
+        (value) {
+      return _then(_value.copyWith(oneTimeNotifications: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CreateOneTimeNotificationStateCopyWith<$Res> get createOneTimeNotification {
+    return $CreateOneTimeNotificationStateCopyWith<$Res>(
+        _value.createOneTimeNotification, (value) {
+      return _then(_value.copyWith(createOneTimeNotification: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -162,13 +198,15 @@ abstract class _$$AppStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {ConnectivityState connectivity,
+      {Wait wait,
+      ConnectivityState connectivity,
       LogInState logIn,
       RegistrationState registration,
       ForgotPasswordState forgotPassword,
       ResetPasswordState resetPassword,
       SessionState session,
-      Wait wait});
+      OneTimeNotificationsState oneTimeNotifications,
+      CreateOneTimeNotificationState createOneTimeNotification});
 
   @override
   $ConnectivityStateCopyWith<$Res> get connectivity;
@@ -182,6 +220,10 @@ abstract class _$$AppStateImplCopyWith<$Res>
   $ResetPasswordStateCopyWith<$Res> get resetPassword;
   @override
   $SessionStateCopyWith<$Res> get session;
+  @override
+  $OneTimeNotificationsStateCopyWith<$Res> get oneTimeNotifications;
+  @override
+  $CreateOneTimeNotificationStateCopyWith<$Res> get createOneTimeNotification;
 }
 
 /// @nodoc
@@ -195,15 +237,21 @@ class __$$AppStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? wait = null,
     Object? connectivity = null,
     Object? logIn = null,
     Object? registration = null,
     Object? forgotPassword = null,
     Object? resetPassword = null,
     Object? session = null,
-    Object? wait = null,
+    Object? oneTimeNotifications = null,
+    Object? createOneTimeNotification = null,
   }) {
     return _then(_$AppStateImpl(
+      wait: null == wait
+          ? _value.wait
+          : wait // ignore: cast_nullable_to_non_nullable
+              as Wait,
       connectivity: null == connectivity
           ? _value.connectivity
           : connectivity // ignore: cast_nullable_to_non_nullable
@@ -228,10 +276,14 @@ class __$$AppStateImplCopyWithImpl<$Res>
           ? _value.session
           : session // ignore: cast_nullable_to_non_nullable
               as SessionState,
-      wait: null == wait
-          ? _value.wait
-          : wait // ignore: cast_nullable_to_non_nullable
-              as Wait,
+      oneTimeNotifications: null == oneTimeNotifications
+          ? _value.oneTimeNotifications
+          : oneTimeNotifications // ignore: cast_nullable_to_non_nullable
+              as OneTimeNotificationsState,
+      createOneTimeNotification: null == createOneTimeNotification
+          ? _value.createOneTimeNotification
+          : createOneTimeNotification // ignore: cast_nullable_to_non_nullable
+              as CreateOneTimeNotificationState,
     ));
   }
 }
@@ -240,14 +292,18 @@ class __$$AppStateImplCopyWithImpl<$Res>
 
 class _$AppStateImpl implements _AppState {
   const _$AppStateImpl(
-      {required this.connectivity,
+      {required this.wait,
+      required this.connectivity,
       required this.logIn,
       required this.registration,
       required this.forgotPassword,
       required this.resetPassword,
       required this.session,
-      required this.wait});
+      required this.oneTimeNotifications,
+      required this.createOneTimeNotification});
 
+  @override
+  final Wait wait;
   @override
   final ConnectivityState connectivity;
   @override
@@ -261,11 +317,13 @@ class _$AppStateImpl implements _AppState {
   @override
   final SessionState session;
   @override
-  final Wait wait;
+  final OneTimeNotificationsState oneTimeNotifications;
+  @override
+  final CreateOneTimeNotificationState createOneTimeNotification;
 
   @override
   String toString() {
-    return 'AppState(connectivity: $connectivity, logIn: $logIn, registration: $registration, forgotPassword: $forgotPassword, resetPassword: $resetPassword, session: $session, wait: $wait)';
+    return 'AppState(wait: $wait, connectivity: $connectivity, logIn: $logIn, registration: $registration, forgotPassword: $forgotPassword, resetPassword: $resetPassword, session: $session, oneTimeNotifications: $oneTimeNotifications, createOneTimeNotification: $createOneTimeNotification)';
   }
 
   @override
@@ -273,6 +331,7 @@ class _$AppStateImpl implements _AppState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AppStateImpl &&
+            (identical(other.wait, wait) || other.wait == wait) &&
             (identical(other.connectivity, connectivity) ||
                 other.connectivity == connectivity) &&
             (identical(other.logIn, logIn) || other.logIn == logIn) &&
@@ -283,12 +342,25 @@ class _$AppStateImpl implements _AppState {
             (identical(other.resetPassword, resetPassword) ||
                 other.resetPassword == resetPassword) &&
             (identical(other.session, session) || other.session == session) &&
-            (identical(other.wait, wait) || other.wait == wait));
+            (identical(other.oneTimeNotifications, oneTimeNotifications) ||
+                other.oneTimeNotifications == oneTimeNotifications) &&
+            (identical(other.createOneTimeNotification,
+                    createOneTimeNotification) ||
+                other.createOneTimeNotification == createOneTimeNotification));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, connectivity, logIn,
-      registration, forgotPassword, resetPassword, session, wait);
+  int get hashCode => Object.hash(
+      runtimeType,
+      wait,
+      connectivity,
+      logIn,
+      registration,
+      forgotPassword,
+      resetPassword,
+      session,
+      oneTimeNotifications,
+      createOneTimeNotification);
 
   @JsonKey(ignore: true)
   @override
@@ -299,14 +371,19 @@ class _$AppStateImpl implements _AppState {
 
 abstract class _AppState implements AppState {
   const factory _AppState(
-      {required final ConnectivityState connectivity,
+      {required final Wait wait,
+      required final ConnectivityState connectivity,
       required final LogInState logIn,
       required final RegistrationState registration,
       required final ForgotPasswordState forgotPassword,
       required final ResetPasswordState resetPassword,
       required final SessionState session,
-      required final Wait wait}) = _$AppStateImpl;
+      required final OneTimeNotificationsState oneTimeNotifications,
+      required final CreateOneTimeNotificationState
+          createOneTimeNotification}) = _$AppStateImpl;
 
+  @override
+  Wait get wait;
   @override
   ConnectivityState get connectivity;
   @override
@@ -320,7 +397,9 @@ abstract class _AppState implements AppState {
   @override
   SessionState get session;
   @override
-  Wait get wait;
+  OneTimeNotificationsState get oneTimeNotifications;
+  @override
+  CreateOneTimeNotificationState get createOneTimeNotification;
   @override
   @JsonKey(ignore: true)
   _$$AppStateImplCopyWith<_$AppStateImpl> get copyWith =>

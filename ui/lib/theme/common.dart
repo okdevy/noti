@@ -19,6 +19,23 @@ ElevatedButtonThemeData elevatedButtonTheme() => ElevatedButtonThemeData(
         backgroundColor: ColorName.primary,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8)),
+          side: BorderSide(color: ColorName.primary),
+        ),
+        textStyle: const TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+          height: 24 / 16,
+        ),
+        minimumSize: const Size.fromHeight(48),
+      ),
+    );
+
+OutlinedButtonThemeData outlinedButtonTheme() => OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        foregroundColor: Colors.white,
+        // backgroundColor: ColorName.primary,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
         textStyle: const TextStyle(
           fontSize: 16,

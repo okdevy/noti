@@ -22,5 +22,13 @@
     "requiredField": "Required field",
     "logInDescription": "Введіть поточний час у гг : хх форматі",
     "confirm": "Підтвердити",
-    "theTimeIsWrongTryAgain": "Час неправильний, спробуйте ще раз."
+    "theTimeIsWrongTryAgain": "Час неправильний, спробуйте ще раз.",
+    "notifications": "Нотифікації",
+    "recurring": "Повторювані",
+    "oneTime": "Одноразові",
+    "addNewNotification": "Додати нову нотифікацію",
+    "time": "Час: ",
+    "message": "Повідомлення: ",
+    "selectTrigger1": "Виберіть тригер 1",
+    "selectTrigger2": "Виберіть тригер 2"
 }

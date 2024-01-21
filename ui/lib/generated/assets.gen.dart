@@ -21,6 +21,17 @@ class $AssetsColorsGen {
   List<String> get values => [colors];
 }
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/ic_person_check.svg
+  SvgGenImage get icPersonCheck =>
+      const SvgGenImage('assets/icons/ic_person_check.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [icPersonCheck];
+}
+
 class $AssetsPlaceholdersGen {
   const $AssetsPlaceholdersGen();
 
@@ -37,6 +48,7 @@ class Assets {
   static const String package = 'ui';
 
   static const $AssetsColorsGen colors = $AssetsColorsGen();
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsPlaceholdersGen placeholders = $AssetsPlaceholdersGen();
 }
 

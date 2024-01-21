@@ -289,6 +289,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Notifications`
+  String get notifications {
+    return Intl.message(
+      'Notifications',
+      name: 'notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recurring`
+  String get recurring {
+    return Intl.message(
+      'Recurring',
+      name: 'recurring',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One-time`
+  String get oneTime {
+    return Intl.message(
+      'One-time',
+      name: 'oneTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add new notification`
+  String get addNewNotification {
+    return Intl.message(
+      'Add new notification',
+      name: 'addNewNotification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time: `
+  String get time {
+    return Intl.message(
+      'Time: ',
+      name: 'time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message: `
+  String get message {
+    return Intl.message(
+      'Message: ',
+      name: 'message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select trigger 1`
+  String get selectTrigger1 {
+    return Intl.message(
+      'Select trigger 1',
+      name: 'selectTrigger1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select trigger 2`
+  String get selectTrigger2 {
+    return Intl.message(
+      'Select trigger 2',
+      name: 'selectTrigger2',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
