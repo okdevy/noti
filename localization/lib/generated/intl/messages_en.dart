@@ -36,13 +36,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailInvalid":
             MessageLookupByLibrary.simpleMessage("Email is invalid"),
+        "enterMessage": MessageLookupByLibrary.simpleMessage("Enter message"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password ?"),
         "invalidEmail": MessageLookupByLibrary.simpleMessage("Invalid email"),
         "logIn": MessageLookupByLibrary.simpleMessage("Log in"),
         "logInDescription": MessageLookupByLibrary.simpleMessage(
             "Enter current time in hh : mm format"),
-        "message": MessageLookupByLibrary.simpleMessage("Message: "),
+        "message": MessageLookupByLibrary.simpleMessage("Message"),
+        "messageColon": MessageLookupByLibrary.simpleMessage("Message: "),
         "minimumLengthSymbols": m0,
         "mustContainAtLeastOneLowercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one lowercase"),

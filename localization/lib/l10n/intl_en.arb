@@ -28,7 +28,9 @@
     "oneTime": "One-time",
     "addNewNotification": "Add new notification",
     "time": "Time: ",
-    "message": "Message: ",
+    "messageColon": "Message: ",
     "selectTrigger1": "Select trigger 1",
-    "selectTrigger2": "Select trigger 2"
+    "selectTrigger2": "Select trigger 2",
+    "message": "Message",
+    "enterMessage": "Enter message"
 }

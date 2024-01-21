@@ -341,10 +341,10 @@ class S {
   }
 
   /// `Message: `
-  String get message {
+  String get messageColon {
     return Intl.message(
       'Message: ',
-      name: 'message',
+      name: 'messageColon',
       desc: '',
       args: [],
     );
@@ -365,6 +365,26 @@ class S {
     return Intl.message(
       'Select trigger 2',
       name: 'selectTrigger2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message`
+  String get message {
+    return Intl.message(
+      'Message',
+      name: 'message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter message`
+  String get enterMessage {
+    return Intl.message(
+      'Enter message',
+      name: 'enterMessage',
       desc: '',
       args: [],
     );

@@ -36,13 +36,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailInvalid":
             MessageLookupByLibrary.simpleMessage("Email is invalid"),
+        "enterMessage":
+            MessageLookupByLibrary.simpleMessage("Введіть повідомлення"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password ?"),
         "invalidEmail": MessageLookupByLibrary.simpleMessage("Invalid email"),
         "logIn": MessageLookupByLibrary.simpleMessage("Увійти"),
         "logInDescription": MessageLookupByLibrary.simpleMessage(
             "Введіть поточний час у гг : хх форматі"),
-        "message": MessageLookupByLibrary.simpleMessage("Повідомлення: "),
+        "message": MessageLookupByLibrary.simpleMessage("Повідомлення"),
+        "messageColon": MessageLookupByLibrary.simpleMessage("Повідомлення: "),
         "minimumLengthSymbols": m0,
         "mustContainAtLeastOneLowercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one lowercase"),

@@ -28,7 +28,9 @@
     "oneTime": "Одноразові",
     "addNewNotification": "Додати нову нотифікацію",
     "time": "Час: ",
-    "message": "Повідомлення: ",
+    "messageColon": "Повідомлення: ",
     "selectTrigger1": "Виберіть тригер 1",
-    "selectTrigger2": "Виберіть тригер 2"
+    "selectTrigger2": "Виберіть тригер 2",
+    "message": "Повідомлення",
+    "enterMessage": "Введіть повідомлення"
 }
