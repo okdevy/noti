@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addNewNotification":
             MessageLookupByLibrary.simpleMessage("Додати нову нотифікацію"),
         "backToLogIn": MessageLookupByLibrary.simpleMessage("Back to logIn"),
+        "backgroundColors": MessageLookupByLibrary.simpleMessage("Колір фону"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Підтвердити"),
         "confirmPassword":
@@ -40,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Введіть повідомлення"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password ?"),
+        "icon": MessageLookupByLibrary.simpleMessage("Іконка"),
+        "iconStyle": MessageLookupByLibrary.simpleMessage("Стиль іконки"),
         "invalidEmail": MessageLookupByLibrary.simpleMessage("Invalid email"),
         "logIn": MessageLookupByLibrary.simpleMessage("Увійти"),
         "logInDescription": MessageLookupByLibrary.simpleMessage(
@@ -63,6 +66,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "requiredField": MessageLookupByLibrary.simpleMessage("Required field"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "selectIcon": MessageLookupByLibrary.simpleMessage("Виберіть іконку"),
+        "selectIcons": MessageLookupByLibrary.simpleMessage("Виберіть іконку"),
         "selectTrigger1":
             MessageLookupByLibrary.simpleMessage("Виберіть тригер 1"),
         "selectTrigger2":
@@ -72,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "thisFieldIsRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
         "time": MessageLookupByLibrary.simpleMessage("Час: "),
-        "title": MessageLookupByLibrary.simpleMessage("Title")
+        "title": MessageLookupByLibrary.simpleMessage("Title"),
+        "typeTime": MessageLookupByLibrary.simpleMessage("Введіть час")
       };
 }

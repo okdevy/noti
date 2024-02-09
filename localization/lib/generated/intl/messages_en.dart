@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addNewNotification":
             MessageLookupByLibrary.simpleMessage("Add new notification"),
         "backToLogIn": MessageLookupByLibrary.simpleMessage("Back to logIn"),
+        "backgroundColors":
+            MessageLookupByLibrary.simpleMessage("Background colors"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmPassword":
@@ -39,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterMessage": MessageLookupByLibrary.simpleMessage("Enter message"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password ?"),
+        "icon": MessageLookupByLibrary.simpleMessage("Icon"),
+        "iconStyle": MessageLookupByLibrary.simpleMessage("Icon style"),
         "invalidEmail": MessageLookupByLibrary.simpleMessage("Invalid email"),
         "logIn": MessageLookupByLibrary.simpleMessage("Log in"),
         "logInDescription": MessageLookupByLibrary.simpleMessage(
@@ -62,6 +66,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "requiredField": MessageLookupByLibrary.simpleMessage("Required field"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "selectIcon": MessageLookupByLibrary.simpleMessage("Select icon"),
+        "selectIcons": MessageLookupByLibrary.simpleMessage("Select icons"),
         "selectTrigger1":
             MessageLookupByLibrary.simpleMessage("Select trigger 1"),
         "selectTrigger2":
@@ -71,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "thisFieldIsRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
         "time": MessageLookupByLibrary.simpleMessage("Time: "),
-        "title": MessageLookupByLibrary.simpleMessage("title")
+        "title": MessageLookupByLibrary.simpleMessage("title"),
+        "typeTime": MessageLookupByLibrary.simpleMessage("Type time")
       };
 }

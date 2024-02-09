@@ -12,4 +12,10 @@
     <color name="colon">#B9B9B9</color>
     <color name="mainRed">#F43528</color>
     <color name="shadeNew">#F3F3F4</color>
+    <color name="cardBackground">#F8FAFB</color>
+    <color name="noneBackground">#F1F4FF</color>
+    <color name="peachRed">#FFF1F1</color>
+    <color name="lemonYellow">#FFFEF1</color>
+    <color name="lightPurple">#F5F1FF</color>
+    <color name="lightPink">#FFF1FF</color>
 </resources>

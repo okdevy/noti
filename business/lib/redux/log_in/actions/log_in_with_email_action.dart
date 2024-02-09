@@ -38,6 +38,6 @@ class LogInWithEmailAction extends ReduxAction<AppState> {
 
     dispatchSync(SetTokenAction(value: 'token'));
 
-    return state.copyWith(logIn: const LogInState());
+    return state.copyWith(logIn: LogInState(time: time));
   }
 }

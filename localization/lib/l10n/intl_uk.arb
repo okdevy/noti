@@ -32,5 +32,11 @@
     "selectTrigger1": "Виберіть тригер 1",
     "selectTrigger2": "Виберіть тригер 2",
     "message": "Повідомлення",
-    "enterMessage": "Введіть повідомлення"
+    "enterMessage": "Введіть повідомлення",
+    "typeTime": "Введіть час",
+    "icon": "Іконка",
+    "selectIcon": "Виберіть іконку",
+    "iconStyle": "Стиль іконки",
+    "backgroundColors": "Колір фону",
+    "selectIcons": "Виберіть іконку"
 }

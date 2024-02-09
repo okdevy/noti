@@ -389,6 +389,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Type time`
+  String get typeTime {
+    return Intl.message(
+      'Type time',
+      name: 'typeTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Icon`
+  String get icon {
+    return Intl.message(
+      'Icon',
+      name: 'icon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select icon`
+  String get selectIcon {
+    return Intl.message(
+      'Select icon',
+      name: 'selectIcon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Icon style`
+  String get iconStyle {
+    return Intl.message(
+      'Icon style',
+      name: 'iconStyle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Background colors`
+  String get backgroundColors {
+    return Intl.message(
+      'Background colors',
+      name: 'backgroundColors',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select icons`
+  String get selectIcons {
+    return Intl.message(
+      'Select icons',
+      name: 'selectIcons',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

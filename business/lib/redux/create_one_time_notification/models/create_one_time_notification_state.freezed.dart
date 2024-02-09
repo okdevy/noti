@@ -16,7 +16,13 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$CreateOneTimeNotificationState {
-  OneTimeNotification? get notification => throw _privateConstructorUsedError;
+  String? get first => throw _privateConstructorUsedError;
+  String? get second => throw _privateConstructorUsedError;
+  String? get third => throw _privateConstructorUsedError;
+  String? get fourth => throw _privateConstructorUsedError;
+  String? get message => throw _privateConstructorUsedError;
+  int get iconIndex => throw _privateConstructorUsedError;
+  int get colorIndex => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CreateOneTimeNotificationStateCopyWith<CreateOneTimeNotificationState>
@@ -31,9 +37,14 @@ abstract class $CreateOneTimeNotificationStateCopyWith<$Res> {
       _$CreateOneTimeNotificationStateCopyWithImpl<$Res,
           CreateOneTimeNotificationState>;
   @useResult
-  $Res call({OneTimeNotification? notification});
-
-  $OneTimeNotificationCopyWith<$Res>? get notification;
+  $Res call(
+      {String? first,
+      String? second,
+      String? third,
+      String? fourth,
+      String? message,
+      int iconIndex,
+      int colorIndex});
 }
 
 /// @nodoc
@@ -50,26 +61,44 @@ class _$CreateOneTimeNotificationStateCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? notification = freezed,
+    Object? first = freezed,
+    Object? second = freezed,
+    Object? third = freezed,
+    Object? fourth = freezed,
+    Object? message = freezed,
+    Object? iconIndex = null,
+    Object? colorIndex = null,
   }) {
     return _then(_value.copyWith(
-      notification: freezed == notification
-          ? _value.notification
-          : notification // ignore: cast_nullable_to_non_nullable
-              as OneTimeNotification?,
+      first: freezed == first
+          ? _value.first
+          : first // ignore: cast_nullable_to_non_nullable
+              as String?,
+      second: freezed == second
+          ? _value.second
+          : second // ignore: cast_nullable_to_non_nullable
+              as String?,
+      third: freezed == third
+          ? _value.third
+          : third // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fourth: freezed == fourth
+          ? _value.fourth
+          : fourth // ignore: cast_nullable_to_non_nullable
+              as String?,
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+      iconIndex: null == iconIndex
+          ? _value.iconIndex
+          : iconIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      colorIndex: null == colorIndex
+          ? _value.colorIndex
+          : colorIndex // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $OneTimeNotificationCopyWith<$Res>? get notification {
-    if (_value.notification == null) {
-      return null;
-    }
-
-    return $OneTimeNotificationCopyWith<$Res>(_value.notification!, (value) {
-      return _then(_value.copyWith(notification: value) as $Val);
-    });
   }
 }
 
@@ -82,10 +111,14 @@ abstract class _$$CreateOneTimeNotificationStateImplCopyWith<$Res>
       __$$CreateOneTimeNotificationStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({OneTimeNotification? notification});
-
-  @override
-  $OneTimeNotificationCopyWith<$Res>? get notification;
+  $Res call(
+      {String? first,
+      String? second,
+      String? third,
+      String? fourth,
+      String? message,
+      int iconIndex,
+      int colorIndex});
 }
 
 /// @nodoc
@@ -101,13 +134,43 @@ class __$$CreateOneTimeNotificationStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? notification = freezed,
+    Object? first = freezed,
+    Object? second = freezed,
+    Object? third = freezed,
+    Object? fourth = freezed,
+    Object? message = freezed,
+    Object? iconIndex = null,
+    Object? colorIndex = null,
   }) {
     return _then(_$CreateOneTimeNotificationStateImpl(
-      notification: freezed == notification
-          ? _value.notification
-          : notification // ignore: cast_nullable_to_non_nullable
-              as OneTimeNotification?,
+      first: freezed == first
+          ? _value.first
+          : first // ignore: cast_nullable_to_non_nullable
+              as String?,
+      second: freezed == second
+          ? _value.second
+          : second // ignore: cast_nullable_to_non_nullable
+              as String?,
+      third: freezed == third
+          ? _value.third
+          : third // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fourth: freezed == fourth
+          ? _value.fourth
+          : fourth // ignore: cast_nullable_to_non_nullable
+              as String?,
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+      iconIndex: null == iconIndex
+          ? _value.iconIndex
+          : iconIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      colorIndex: null == colorIndex
+          ? _value.colorIndex
+          : colorIndex // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -116,14 +179,35 @@ class __$$CreateOneTimeNotificationStateImplCopyWithImpl<$Res>
 
 class _$CreateOneTimeNotificationStateImpl
     implements _CreateOneTimeNotificationState {
-  const _$CreateOneTimeNotificationStateImpl({this.notification});
+  const _$CreateOneTimeNotificationStateImpl(
+      {this.first,
+      this.second,
+      this.third,
+      this.fourth,
+      this.message,
+      this.iconIndex = 0,
+      this.colorIndex = 0});
 
   @override
-  final OneTimeNotification? notification;
+  final String? first;
+  @override
+  final String? second;
+  @override
+  final String? third;
+  @override
+  final String? fourth;
+  @override
+  final String? message;
+  @override
+  @JsonKey()
+  final int iconIndex;
+  @override
+  @JsonKey()
+  final int colorIndex;
 
   @override
   String toString() {
-    return 'CreateOneTimeNotificationState(notification: $notification)';
+    return 'CreateOneTimeNotificationState(first: $first, second: $second, third: $third, fourth: $fourth, message: $message, iconIndex: $iconIndex, colorIndex: $colorIndex)';
   }
 
   @override
@@ -131,12 +215,20 @@ class _$CreateOneTimeNotificationStateImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateOneTimeNotificationStateImpl &&
-            (identical(other.notification, notification) ||
-                other.notification == notification));
+            (identical(other.first, first) || other.first == first) &&
+            (identical(other.second, second) || other.second == second) &&
+            (identical(other.third, third) || other.third == third) &&
+            (identical(other.fourth, fourth) || other.fourth == fourth) &&
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.iconIndex, iconIndex) ||
+                other.iconIndex == iconIndex) &&
+            (identical(other.colorIndex, colorIndex) ||
+                other.colorIndex == colorIndex));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, notification);
+  int get hashCode => Object.hash(runtimeType, first, second, third, fourth,
+      message, iconIndex, colorIndex);
 
   @JsonKey(ignore: true)
   @override
@@ -150,11 +242,28 @@ class _$CreateOneTimeNotificationStateImpl
 abstract class _CreateOneTimeNotificationState
     implements CreateOneTimeNotificationState {
   const factory _CreateOneTimeNotificationState(
-          {final OneTimeNotification? notification}) =
-      _$CreateOneTimeNotificationStateImpl;
+      {final String? first,
+      final String? second,
+      final String? third,
+      final String? fourth,
+      final String? message,
+      final int iconIndex,
+      final int colorIndex}) = _$CreateOneTimeNotificationStateImpl;
 
   @override
-  OneTimeNotification? get notification;
+  String? get first;
+  @override
+  String? get second;
+  @override
+  String? get third;
+  @override
+  String? get fourth;
+  @override
+  String? get message;
+  @override
+  int get iconIndex;
+  @override
+  int get colorIndex;
   @override
   @JsonKey(ignore: true)
   _$$CreateOneTimeNotificationStateImplCopyWith<

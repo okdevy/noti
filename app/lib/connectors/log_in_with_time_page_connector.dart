@@ -10,10 +10,10 @@ import 'package:business/redux/log_in/log_in_selectors.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:ui/models/value_changed.dart';
-import 'package:ui/pages/log_in_by_time_page.dart';
+import 'package:ui/pages/log_in_with_time_page.dart';
 
-class LogInPageConnector extends StatelessWidget {
-  const LogInPageConnector({
+class LogInWithTimePageConnector extends StatelessWidget {
+  const LogInWithTimePageConnector({
     super.key,
   });
 
@@ -22,7 +22,7 @@ class LogInPageConnector extends StatelessWidget {
         debug: this,
         vm: () => _Factory(this),
         onInit: (store) => store.dispatchSync(InitLogInAction()),
-        builder: (context, vm) => LogInByTimePage(
+        builder: (context, vm) => LogInWithTimePage(
           first: vm.first,
           second: vm.second,
           third: vm.third,
@@ -35,7 +35,7 @@ class LogInPageConnector extends StatelessWidget {
 }
 
 /// Factory that creates a view-model  for the StoreConnector.
-class _Factory extends VmFactory<AppState, LogInPageConnector, _Vm> {
+class _Factory extends VmFactory<AppState, LogInWithTimePageConnector, _Vm> {
   _Factory(super._connector);
 
   @override

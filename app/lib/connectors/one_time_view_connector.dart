@@ -7,6 +7,8 @@ import 'package:ui/cards/notification_card.dart';
 import 'package:ui/models/enum/icon_type.dart';
 import 'package:ui/views/one_time_view.dart';
 
+import '../navigation/routes.dart';
+
 class OneTimeViewConnector extends StatelessWidget {
   const OneTimeViewConnector({
     super.key,
@@ -45,7 +47,8 @@ class _Factory extends VmFactory<AppState, OneTimeViewConnector, _Vm> {
               ),
             )
             .toList(growable: false),
-        onPressedAdd: () {},
+        onPressedAdd: () async =>
+            router.pushNamed(Routes.createOneTimeNotification),
       ),
     );
   }

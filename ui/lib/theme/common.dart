@@ -36,6 +36,7 @@ OutlinedButtonThemeData outlinedButtonTheme() => OutlinedButtonThemeData(
         // backgroundColor: ColorName.primary,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8)),
+          side: BorderSide(color: ColorName.primary),
         ),
         textStyle: const TextStyle(
           fontSize: 16,
@@ -49,7 +50,7 @@ OutlinedButtonThemeData outlinedButtonTheme() => OutlinedButtonThemeData(
 DialogTheme dialogTheme() => _base.dialogTheme.copyWith();
 
 InputDecorationTheme inputDecorationTheme() {
-  const borderRadius = BorderRadius.all(Radius.circular(28));
+  const borderRadius = BorderRadius.all(Radius.circular(8));
 
   return _base.inputDecorationTheme.copyWith(
     isDense: true,
@@ -64,6 +65,7 @@ InputDecorationTheme inputDecorationTheme() {
       borderSide: BorderSide(color: Colors.grey.shade200),
     ),
     focusColor: ColorName.primary,
+    labelStyle: const TextStyle(color: ColorName.colon),
   );
 }
 

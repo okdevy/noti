@@ -8,7 +8,7 @@ class RoundedOutlinedButton extends StatelessWidget {
     this.backgroundColor,
     this.foregroundColor,
     this.width = 92,
-    this.height = 56,
+    this.height = 40,
     this.borderRadius = const BorderRadius.all(Radius.circular(12)),
     this.elevation = 0,
     super.key,

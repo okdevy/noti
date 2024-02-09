@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: BaseAppBar(title: S.current.notifications),
+        appBar: BaseAppBar(implyLeading: false, title: S.current.notifications),
         body: Column(
           children: [
             ColoredBox(

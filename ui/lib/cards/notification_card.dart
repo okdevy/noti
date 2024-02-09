@@ -34,6 +34,7 @@ class NotificationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Card(
         elevation: 0,
+        color: ColorName.cardBackground,
         margin: const EdgeInsets.only(bottom: 16),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),

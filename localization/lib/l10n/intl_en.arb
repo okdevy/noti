@@ -32,5 +32,11 @@
     "selectTrigger1": "Select trigger 1",
     "selectTrigger2": "Select trigger 2",
     "message": "Message",
-    "enterMessage": "Enter message"
+    "enterMessage": "Enter message",
+    "typeTime": "Type time",
+    "icon": "Icon",
+    "selectIcon": "Select icon",
+    "iconStyle": "Icon style",
+    "backgroundColors": "Background colors",
+    "selectIcons": "Select icons"
 }
