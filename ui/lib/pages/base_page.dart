@@ -19,23 +19,21 @@ class BasePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: BaseAppBar(title: title),
-        body: Column(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                physics: const AlwaysScrollableScrollPhysics(),
-                padding: padding,
-                keyboardDismissBehavior:
-                    ScrollViewKeyboardDismissBehavior.onDrag,
-                child: child,
+        body: SafeArea(
+          child: Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  padding: padding,
+                  keyboardDismissBehavior:
+                      ScrollViewKeyboardDismissBehavior.onDrag,
+                  child: child,
+                ),
               ),
-            ),
-            if (bottomAction != null)
-              SafeArea(
-                top: false,
-                child: bottomAction!,
-              ),
-          ],
+              if (bottomAction != null) bottomAction!,
+            ],
+          ),
         ),
       );
 }

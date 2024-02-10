@@ -10,6 +10,5 @@ class SetColorAction extends ReduxAction<AppState> {
   final int? colorIndex;
 
   @override
-  AppState reduce() =>
-      state.copyWith.createOneTimeNotification(colorIndex: colorIndex);
+  AppState reduce() => state.copyWith.createOneTime(colorIndex: colorIndex);
 }

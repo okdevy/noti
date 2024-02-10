@@ -8,5 +8,5 @@ class SetFourthAction extends ReduxAction<AppState> {
   final String fourth;
 
   @override
-  AppState reduce() => state.copyWith.createOneTimeNotification(fourth: fourth);
+  AppState reduce() => state.copyWith.createOneTime(fourth: fourth);
 }

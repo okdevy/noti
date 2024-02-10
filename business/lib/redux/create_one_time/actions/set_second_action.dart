@@ -8,5 +8,5 @@ class SetSecondAction extends ReduxAction<AppState> {
   final String second;
 
   @override
-  AppState reduce() => state.copyWith.createOneTimeNotification(second: second);
+  AppState reduce() => state.copyWith.createOneTime(second: second);
 }

@@ -31,6 +31,7 @@ class CreateOneTimeNotificationPageConnector extends StatelessWidget {
           forth: vm.forth,
           color: vm.color,
           icon: vm.icon,
+          onPressedConfirm: vm.onPressedConfirm,
         ),
       );
 }
@@ -81,6 +82,7 @@ class _Factory
         onChanged: (value) =>
             dispatchSync(SetColorAction(colorIndex: value?.index)),
       ),
+      onPressedConfirm: (),
     );
   }
 }
@@ -95,6 +97,7 @@ class _Vm extends Vm with EquatableMixin {
     required this.forth,
     required this.color,
     required this.icon,
+    required this.onPressedConfirm,
   });
 
   final ValueChangedWithErrorVm<String?> message;
@@ -104,8 +107,17 @@ class _Vm extends Vm with EquatableMixin {
   final ValueChangedVm<String?> forth;
   final ValueChangedVm<ColorType?> color;
   final ValueChangedVm<IconType?> icon;
+  final VoidCallback? onPressedConfirm;
 
   @override
-  List<Object?> get props =>
-      [message, first, second, third, forth, icon, color];
+  List<Object?> get props => [
+        message,
+        first,
+        second,
+        third,
+        forth,
+        icon,
+        color,
+        onPressedConfirm == null,
+      ];
 }

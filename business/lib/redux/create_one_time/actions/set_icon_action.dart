@@ -10,6 +10,5 @@ class SetIconAction extends ReduxAction<AppState> {
   final int? iconIndex;
 
   @override
-  AppState reduce() =>
-      state.copyWith.createOneTimeNotification(iconIndex: iconIndex);
+  AppState reduce() => state.copyWith.createOneTime(iconIndex: iconIndex);
 }

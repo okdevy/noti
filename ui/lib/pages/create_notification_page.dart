@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 
+import '../buttons/rounded_button.dart';
 import '../buttons/rounded_outlined_button.dart';
 import '../generated/colors.gen.dart';
 import '../inputs/text_area_input.dart';
@@ -20,6 +21,7 @@ class CreateNotificationPage extends StatefulWidget {
     required this.forth,
     required this.color,
     required this.icon,
+    required this.onPressedConfirm,
     super.key,
   });
 
@@ -30,6 +32,7 @@ class CreateNotificationPage extends StatefulWidget {
   final ValueChangedVm<String?> forth;
   final ValueChangedVm<ColorType?> color;
   final ValueChangedVm<IconType?> icon;
+  final VoidCallback? onPressedConfirm;
 
   @override
   State<CreateNotificationPage> createState() => _CreateNotificationPageState();
@@ -72,71 +75,74 @@ class _CreateNotificationPageState extends State<CreateNotificationPage> {
   Widget build(BuildContext context) => BasePage(
         title: S.current.addNewNotification,
         padding: const EdgeInsets.fromLTRB(16, 24, 16, 16),
+        bottomAction: SafeArea(
+          top: false,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 32, 16, 34),
+            child: RoundedButton(
+              title: S.current.confirm,
+              onPressed: widget.onPressedConfirm,
+            ),
+          ),
+        ),
         child: Column(
-          mainAxisSize: MainAxisSize.min,
           children: [
-            Flexible(
-              child: ContainerWithTitle(
-                title: S.current.message,
-                children: [
-                  TextAreaInput(
-                    vm: widget.message,
-                    labelText: S.current.enterMessage,
-                  ),
-                ],
-              ),
+            ContainerWithTitle(
+              title: S.current.message,
+              children: [
+                TextAreaInput(
+                  vm: widget.message,
+                  labelText: S.current.enterMessage,
+                ),
+              ],
             ),
             const SizedBox(height: 24),
-            Flexible(
-              child: ContainerWithTitle(
-                title: S.current.typeTime,
-                children: [
-                  DigitsInputRow(
-                    first: widget.first,
-                    second: widget.second,
-                    third: widget.third,
-                    forth: widget.forth,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                  ),
-                ],
-              ),
+            ContainerWithTitle(
+              title: S.current.typeTime,
+              children: [
+                DigitsInputRow(
+                  first: widget.first,
+                  second: widget.second,
+                  third: widget.third,
+                  forth: widget.forth,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                ),
+              ],
             ),
             const SizedBox(height: 24),
-            Flexible(
-              child: ContainerWithTitle(
-                title: S.current.icon,
-                children: [
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 80,
-                        height: 80,
-                        child: DecoratedBox(
-                          decoration: BoxDecoration(
-                            color: widget.color.value?.color,
-                            borderRadius: BorderRadius.circular(40),
-                            border: Border.all(
-                              color: ColorName.colon,
-                            ),
+            ContainerWithTitle(
+              title: S.current.icon,
+              children: [
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 80,
+                      height: 80,
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          color: widget.color.value?.color,
+                          borderRadius: BorderRadius.circular(40),
+                          border: Border.all(
+                            color: ColorName.colon,
                           ),
-                          child: widget.icon.value?.icon ??
-                              const Icon(
-                                Icons.image_outlined,
-                                color: ColorName.colon,
-                                size: 48,
-                              ),
                         ),
+                        child: widget.icon.value?.icon ??
+                            const Icon(
+                              Icons.image_outlined,
+                              color: ColorName.colon,
+                              size: 48,
+                            ),
                       ),
-                      const SizedBox(width: 16),
-                      RoundedOutlinedButton(
-                        title: S.current.selectIcon,
-                        width: 158,
-                        onPressed: () async => _showIconPicker(context),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                    const SizedBox(width: 16),
+                    RoundedOutlinedButton(
+                      title: S.current.selectIcon,
+                      width: 158,
+                      onPressed: () async => _showIconPicker(context),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),

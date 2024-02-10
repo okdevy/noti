@@ -31,21 +31,18 @@ class LogInWithTimePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => BasePage(
         title: S.current.logIn,
-        bottomAction: SafeArea(
-          top: false,
-          child: Column(
-            children: [
-              const SizedBox(height: 32),
-              if (isTimeWrong) const ErrorBanner(),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 32, 16, 34),
-                child: RoundedButton(
-                  title: S.current.confirm,
-                  onPressed: onPressedLogIn,
-                ),
+        bottomAction: Column(
+          children: [
+            const SizedBox(height: 32),
+            if (isTimeWrong) const ErrorBanner(),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 32, 16, 34),
+              child: RoundedButton(
+                title: S.current.confirm,
+                onPressed: onPressedLogIn,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
         child: Column(
           children: [

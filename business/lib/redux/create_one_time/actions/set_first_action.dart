@@ -8,5 +8,5 @@ class SetFirstAction extends ReduxAction<AppState> {
   final String first;
 
   @override
-  AppState reduce() => state.copyWith.createOneTimeNotification(first: first);
+  AppState reduce() => state.copyWith.createOneTime(first: first);
 }

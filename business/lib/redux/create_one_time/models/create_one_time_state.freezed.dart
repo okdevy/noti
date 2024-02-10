@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'create_one_time_notification_state.dart';
+part of 'create_one_time_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$CreateOneTimeNotificationState {
+mixin _$CreateOneTimeState {
   String? get first => throw _privateConstructorUsedError;
   String? get second => throw _privateConstructorUsedError;
   String? get third => throw _privateConstructorUsedError;
@@ -25,17 +25,15 @@ mixin _$CreateOneTimeNotificationState {
   int? get colorIndex => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $CreateOneTimeNotificationStateCopyWith<CreateOneTimeNotificationState>
-      get copyWith => throw _privateConstructorUsedError;
+  $CreateOneTimeStateCopyWith<CreateOneTimeState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CreateOneTimeNotificationStateCopyWith<$Res> {
-  factory $CreateOneTimeNotificationStateCopyWith(
-          CreateOneTimeNotificationState value,
-          $Res Function(CreateOneTimeNotificationState) then) =
-      _$CreateOneTimeNotificationStateCopyWithImpl<$Res,
-          CreateOneTimeNotificationState>;
+abstract class $CreateOneTimeStateCopyWith<$Res> {
+  factory $CreateOneTimeStateCopyWith(
+          CreateOneTimeState value, $Res Function(CreateOneTimeState) then) =
+      _$CreateOneTimeStateCopyWithImpl<$Res, CreateOneTimeState>;
   @useResult
   $Res call(
       {String? first,
@@ -48,10 +46,9 @@ abstract class $CreateOneTimeNotificationStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CreateOneTimeNotificationStateCopyWithImpl<$Res,
-        $Val extends CreateOneTimeNotificationState>
-    implements $CreateOneTimeNotificationStateCopyWith<$Res> {
-  _$CreateOneTimeNotificationStateCopyWithImpl(this._value, this._then);
+class _$CreateOneTimeStateCopyWithImpl<$Res, $Val extends CreateOneTimeState>
+    implements $CreateOneTimeStateCopyWith<$Res> {
+  _$CreateOneTimeStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -103,12 +100,11 @@ class _$CreateOneTimeNotificationStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$CreateOneTimeNotificationStateImplCopyWith<$Res>
-    implements $CreateOneTimeNotificationStateCopyWith<$Res> {
-  factory _$$CreateOneTimeNotificationStateImplCopyWith(
-          _$CreateOneTimeNotificationStateImpl value,
-          $Res Function(_$CreateOneTimeNotificationStateImpl) then) =
-      __$$CreateOneTimeNotificationStateImplCopyWithImpl<$Res>;
+abstract class _$$CreateOneTimeStateImplCopyWith<$Res>
+    implements $CreateOneTimeStateCopyWith<$Res> {
+  factory _$$CreateOneTimeStateImplCopyWith(_$CreateOneTimeStateImpl value,
+          $Res Function(_$CreateOneTimeStateImpl) then) =
+      __$$CreateOneTimeStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -122,13 +118,11 @@ abstract class _$$CreateOneTimeNotificationStateImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CreateOneTimeNotificationStateImplCopyWithImpl<$Res>
-    extends _$CreateOneTimeNotificationStateCopyWithImpl<$Res,
-        _$CreateOneTimeNotificationStateImpl>
-    implements _$$CreateOneTimeNotificationStateImplCopyWith<$Res> {
-  __$$CreateOneTimeNotificationStateImplCopyWithImpl(
-      _$CreateOneTimeNotificationStateImpl _value,
-      $Res Function(_$CreateOneTimeNotificationStateImpl) _then)
+class __$$CreateOneTimeStateImplCopyWithImpl<$Res>
+    extends _$CreateOneTimeStateCopyWithImpl<$Res, _$CreateOneTimeStateImpl>
+    implements _$$CreateOneTimeStateImplCopyWith<$Res> {
+  __$$CreateOneTimeStateImplCopyWithImpl(_$CreateOneTimeStateImpl _value,
+      $Res Function(_$CreateOneTimeStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -142,7 +136,7 @@ class __$$CreateOneTimeNotificationStateImplCopyWithImpl<$Res>
     Object? iconIndex = freezed,
     Object? colorIndex = freezed,
   }) {
-    return _then(_$CreateOneTimeNotificationStateImpl(
+    return _then(_$CreateOneTimeStateImpl(
       first: freezed == first
           ? _value.first
           : first // ignore: cast_nullable_to_non_nullable
@@ -177,9 +171,8 @@ class __$$CreateOneTimeNotificationStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CreateOneTimeNotificationStateImpl
-    implements _CreateOneTimeNotificationState {
-  const _$CreateOneTimeNotificationStateImpl(
+class _$CreateOneTimeStateImpl implements _CreateOneTimeState {
+  const _$CreateOneTimeStateImpl(
       {this.first,
       this.second,
       this.third,
@@ -205,14 +198,14 @@ class _$CreateOneTimeNotificationStateImpl
 
   @override
   String toString() {
-    return 'CreateOneTimeNotificationState(first: $first, second: $second, third: $third, fourth: $fourth, message: $message, iconIndex: $iconIndex, colorIndex: $colorIndex)';
+    return 'CreateOneTimeState(first: $first, second: $second, third: $third, fourth: $fourth, message: $message, iconIndex: $iconIndex, colorIndex: $colorIndex)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CreateOneTimeNotificationStateImpl &&
+            other is _$CreateOneTimeStateImpl &&
             (identical(other.first, first) || other.first == first) &&
             (identical(other.second, second) || other.second == second) &&
             (identical(other.third, third) || other.third == third) &&
@@ -231,22 +224,20 @@ class _$CreateOneTimeNotificationStateImpl
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreateOneTimeNotificationStateImplCopyWith<
-          _$CreateOneTimeNotificationStateImpl>
-      get copyWith => __$$CreateOneTimeNotificationStateImplCopyWithImpl<
-          _$CreateOneTimeNotificationStateImpl>(this, _$identity);
+  _$$CreateOneTimeStateImplCopyWith<_$CreateOneTimeStateImpl> get copyWith =>
+      __$$CreateOneTimeStateImplCopyWithImpl<_$CreateOneTimeStateImpl>(
+          this, _$identity);
 }
 
-abstract class _CreateOneTimeNotificationState
-    implements CreateOneTimeNotificationState {
-  const factory _CreateOneTimeNotificationState(
+abstract class _CreateOneTimeState implements CreateOneTimeState {
+  const factory _CreateOneTimeState(
       {final String? first,
       final String? second,
       final String? third,
       final String? fourth,
       final String? message,
       final int? iconIndex,
-      final int? colorIndex}) = _$CreateOneTimeNotificationStateImpl;
+      final int? colorIndex}) = _$CreateOneTimeStateImpl;
 
   @override
   String? get first;
@@ -264,7 +255,6 @@ abstract class _CreateOneTimeNotificationState
   int? get colorIndex;
   @override
   @JsonKey(ignore: true)
-  _$$CreateOneTimeNotificationStateImplCopyWith<
-          _$CreateOneTimeNotificationStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$CreateOneTimeStateImplCopyWith<_$CreateOneTimeStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

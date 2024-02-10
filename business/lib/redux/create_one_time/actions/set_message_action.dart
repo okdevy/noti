@@ -8,7 +8,7 @@ class SetMessageAction extends ReduxAction<AppState> {
   final String value;
 
   @override
-  AppState reduce() => state.copyWith.createOneTimeNotification(
+  AppState reduce() => state.copyWith.createOneTime(
         message: value,
       );
 }

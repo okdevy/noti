@@ -8,5 +8,5 @@ class SetThirdAction extends ReduxAction<AppState> {
   final String third;
 
   @override
-  AppState reduce() => state.copyWith.createOneTimeNotification(third: third);
+  AppState reduce() => state.copyWith.createOneTime(third: third);
 }

@@ -2,7 +2,7 @@ import 'package:async_redux/async_redux.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'connectivity/models/connectivity_state.dart';
-import 'create_one_time_notification/models/create_one_time_notification_state.dart';
+import 'create_one_time/models/create_one_time_state.dart';
 import 'forgot_password/models/forgot_password_state.dart';
 import 'log_in/models/log_in_state.dart';
 import 'one_time_notifications/models/one_time_notifications_state.dart';
@@ -23,7 +23,7 @@ class AppState with _$AppState {
     required ResetPasswordState resetPassword,
     required SessionState session,
     required OneTimeNotificationsState oneTimeNotifications,
-    required CreateOneTimeNotificationState createOneTimeNotification,
+    required CreateOneTimeState createOneTime,
   }) = _AppState;
 
   factory AppState.initial() => const AppState(
@@ -35,6 +35,6 @@ class AppState with _$AppState {
         resetPassword: ResetPasswordState(),
         session: SessionState(),
         oneTimeNotifications: OneTimeNotificationsState(),
-        createOneTimeNotification: CreateOneTimeNotificationState(),
+        createOneTime: CreateOneTimeState(),
       );
 }
