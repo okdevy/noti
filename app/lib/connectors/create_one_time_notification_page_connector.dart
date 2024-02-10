@@ -1,12 +1,13 @@
 import 'package:async_redux/async_redux.dart';
 import 'package:business/redux/app_state.dart';
-import 'package:business/redux/create_one_time_notification/actions/set_color_action.dart';
-import 'package:business/redux/create_one_time_notification/actions/set_first_action.dart';
-import 'package:business/redux/create_one_time_notification/actions/set_fourth_action.dart';
-import 'package:business/redux/create_one_time_notification/actions/set_icon_action.dart';
-import 'package:business/redux/create_one_time_notification/actions/set_second_action.dart';
-import 'package:business/redux/create_one_time_notification/actions/set_third_action.dart';
-import 'package:business/redux/create_one_time_notification/create_one_time_notification_selectors.dart';
+import 'package:business/redux/create_one_time/actions/create_one_time_action.dart';
+import 'package:business/redux/create_one_time/actions/set_color_action.dart';
+import 'package:business/redux/create_one_time/actions/set_icon_action.dart';
+import 'package:business/redux/create_one_time/create_one_time_notification_selectors.dart';
+import 'package:business/redux/log_in/actions/set_first_action.dart';
+import 'package:business/redux/log_in/actions/set_fourth_action.dart';
+import 'package:business/redux/log_in/actions/set_second_action.dart';
+import 'package:business/redux/log_in/actions/set_third_action.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:ui/models/enum/color_type.dart';
@@ -43,13 +44,13 @@ class _Factory
 
   @override
   _Vm fromStore() {
-    final first = selectCreateOneTimeNotificationFirst(state);
-    final second = selectCreateOneTimeNotificationSecond(state);
-    final third = selectCreateOneTimeNotificationThird(state);
-    final fourth = selectCreateOneTimeNotificationFourth(state);
-    final message = selectCreateOneTimeNotificationMessage(state);
-    final iconIndex = selectCreateOneTimeNotificationIconIndex(state);
-    final colorIndex = selectCreateOneTimeNotificationColorIndex(state);
+    final first = selectCreateOneTimeFirst(state);
+    final second = selectCreateOneTimeSecond(state);
+    final third = selectCreateOneTimeThird(state);
+    final fourth = selectCreateOneTimeFourth(state);
+    final message = selectCreateOneTimeMessage(state);
+    final iconIndex = selectCreateOneTimeIconIndex(state);
+    final colorIndex = selectCreateOneTimeColorIndex(state);
 
     return _Vm(
       message: ValueChangedWithErrorVm<String?>(
@@ -82,7 +83,7 @@ class _Factory
         onChanged: (value) =>
             dispatchSync(SetColorAction(colorIndex: value?.index)),
       ),
-      onPressedConfirm: (),
+      onPressedConfirm: () => dispatchSync(CreateOneTimeAction()),
     );
   }
 }

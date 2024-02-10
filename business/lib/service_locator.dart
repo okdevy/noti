@@ -1,6 +1,6 @@
 import 'package:async_redux/async_redux.dart';
 import 'package:get_it/get_it.dart';
-import 'package:storage/storage.dart';
+import 'package:storage/hive/storage.dart';
 
 import 'environment.dart';
 import 'redux/app_state.dart';
