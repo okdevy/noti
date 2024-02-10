@@ -11,6 +11,7 @@ ThemeData buildTheme() => _base.copyWith(
       dialogTheme: dialogTheme(),
       elevatedButtonTheme: elevatedButtonTheme(),
       appBarTheme: appBarTheme(),
+      outlinedButtonTheme: outlinedButtonTheme(),
     );
 
 ElevatedButtonThemeData elevatedButtonTheme() => ElevatedButtonThemeData(
@@ -32,18 +33,17 @@ ElevatedButtonThemeData elevatedButtonTheme() => ElevatedButtonThemeData(
 
 OutlinedButtonThemeData outlinedButtonTheme() => OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        foregroundColor: Colors.white,
-        // backgroundColor: ColorName.primary,
+        elevation: 0,
+        foregroundColor: ColorName.primary,
+        backgroundColor: Colors.white,
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(8)),
-          side: BorderSide(color: ColorName.primary),
+          borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
         textStyle: const TextStyle(
-          fontSize: 16,
+          fontSize: 14,
+          height: 20 / 14,
           fontWeight: FontWeight.bold,
-          height: 24 / 16,
         ),
-        minimumSize: const Size.fromHeight(48),
       ),
     );
 

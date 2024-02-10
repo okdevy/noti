@@ -7,7 +7,7 @@ class SetIconAction extends ReduxAction<AppState> {
     required this.iconIndex,
   });
 
-  final int iconIndex;
+  final int? iconIndex;
 
   @override
   AppState reduce() =>

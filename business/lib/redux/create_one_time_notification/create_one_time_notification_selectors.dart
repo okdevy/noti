@@ -20,10 +20,10 @@ String? selectCreateOneTimeNotificationFourth(AppState state) =>
 String? selectCreateOneTimeNotificationMessage(AppState state) =>
     state.createOneTimeNotification.message;
 
-/// Returns [int] icon index
-int selectCreateOneTimeNotificationIconIndex(AppState state) =>
+/// Returns [int?] icon index
+int? selectCreateOneTimeNotificationIconIndex(AppState state) =>
     state.createOneTimeNotification.iconIndex;
 
-/// Returns [int] color index
-int selectCreateOneTimeNotificationColorIndex(AppState state) =>
+/// Returns [int?] color index
+int? selectCreateOneTimeNotificationColorIndex(AppState state) =>
     state.createOneTimeNotification.colorIndex;

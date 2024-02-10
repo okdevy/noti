@@ -29,8 +29,8 @@ class CreateOneTimeNotificationPageConnector extends StatelessWidget {
           second: vm.second,
           third: vm.third,
           forth: vm.forth,
-          iconType: vm.icon,
-          colorType: vm.color,
+          color: vm.color,
+          icon: vm.icon,
         ),
       );
 }
@@ -72,14 +72,14 @@ class _Factory
         onChanged: (value) => dispatchSync(SetFourthAction(value!)),
       ),
       icon: ValueChangedVm(
-        value: IconType.values[iconIndex],
+        value: iconIndex != null ? IconType.values[iconIndex] : null,
         onChanged: (value) =>
-            dispatchSync(SetIconAction(iconIndex: value.index)),
+            dispatchSync(SetIconAction(iconIndex: value?.index)),
       ),
       color: ValueChangedVm(
-        value: ColorType.values[colorIndex],
+        value: colorIndex != null ? ColorType.values[colorIndex] : null,
         onChanged: (value) =>
-            dispatchSync(SetColorAction(colorIndex: value.index)),
+            dispatchSync(SetColorAction(colorIndex: value?.index)),
       ),
     );
   }
@@ -93,8 +93,8 @@ class _Vm extends Vm with EquatableMixin {
     required this.second,
     required this.third,
     required this.forth,
-    required this.icon,
     required this.color,
+    required this.icon,
   });
 
   final ValueChangedWithErrorVm<String?> message;
@@ -102,17 +102,10 @@ class _Vm extends Vm with EquatableMixin {
   final ValueChangedVm<String?> second;
   final ValueChangedVm<String?> third;
   final ValueChangedVm<String?> forth;
-  final ValueChangedVm<IconType> icon;
-  final ValueChangedVm<ColorType> color;
+  final ValueChangedVm<ColorType?> color;
+  final ValueChangedVm<IconType?> icon;
 
   @override
-  List<Object?> get props => [
-        message,
-        first,
-        second,
-        third,
-        forth,
-        icon,
-        color,
-      ];
+  List<Object?> get props =>
+      [message, first, second, third, forth, icon, color];
 }

@@ -10,13 +10,13 @@ import '../models/value_changed.dart';
 
 class IconPicker extends StatelessWidget {
   const IconPicker({
-    required this.colorType,
-    required this.iconType,
+    required this.color,
+    required this.icon,
     super.key,
   });
 
-  final ValueListenable<ValueChangedVm<ColorType>> colorType;
-  final ValueListenable<ValueChangedVm<IconType>> iconType;
+  final ValueListenable<ValueChangedVm<ColorType?>> color;
+  final ValueListenable<ValueChangedVm<IconType?>> icon;
 
   @override
   Widget build(BuildContext context) => SizedBox(
@@ -80,7 +80,7 @@ class IconPicker extends StatelessWidget {
                     ),
                     const SizedBox(height: 11),
                     ValueListenableBuilder(
-                      valueListenable: colorType,
+                      valueListenable: color,
                       builder: (context, value, child) => Wrap(
                         spacing: 6,
                         children: ColorType.values
@@ -89,7 +89,7 @@ class IconPicker extends StatelessWidget {
                                 children: [
                                   DecoratedBox(
                                     decoration: BoxDecoration(
-                                      border: i == colorType.value.value.index
+                                      border: i == color.value.value?.index
                                           ? Border.all(
                                               color: ColorName.primary,
                                               width: 2,
@@ -148,20 +148,16 @@ class IconPicker extends StatelessWidget {
                     ),
                     const SizedBox(height: 11),
                     ValueListenableBuilder(
-                      valueListenable: iconType,
+                      valueListenable: icon,
                       builder: (context, value, child) => Wrap(
                         spacing: 6,
-                        children: IconType.values.mapIndexed(
-                          (i, e) {
-                            if (e == IconType.none) {
-                              return const SizedBox();
-                            }
-
-                            return Stack(
+                        children: [
+                          ...IconType.values.mapIndexed(
+                            (i, e) => Stack(
                               children: [
                                 DecoratedBox(
                                   decoration: BoxDecoration(
-                                    border: i == iconType.value.value.index
+                                    border: i == icon.value.value?.index
                                         ? Border.all(
                                             color: ColorName.primary,
                                             width: 2,
@@ -198,9 +194,9 @@ class IconPicker extends StatelessWidget {
                                   ),
                                 ),
                               ],
-                            );
-                          },
-                        ).toList(growable: false),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],

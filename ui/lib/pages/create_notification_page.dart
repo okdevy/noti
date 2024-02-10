@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:localization/localization.dart';
 
-import '../buttons/rounded__outlined_button.dart';
+import '../buttons/rounded_outlined_button.dart';
 import '../generated/colors.gen.dart';
 import '../inputs/text_area_input.dart';
 import '../modals/icon_picker.dart';
@@ -18,8 +18,8 @@ class CreateNotificationPage extends StatefulWidget {
     required this.second,
     required this.third,
     required this.forth,
-    required this.iconType,
-    required this.colorType,
+    required this.color,
+    required this.icon,
     super.key,
   });
 
@@ -28,28 +28,27 @@ class CreateNotificationPage extends StatefulWidget {
   final ValueChangedVm<String?> second;
   final ValueChangedVm<String?> third;
   final ValueChangedVm<String?> forth;
-  final ValueChangedVm<IconType> iconType;
-  final ValueChangedVm<ColorType> colorType;
+  final ValueChangedVm<ColorType?> color;
+  final ValueChangedVm<IconType?> icon;
 
   @override
   State<CreateNotificationPage> createState() => _CreateNotificationPageState();
 }
 
 class _CreateNotificationPageState extends State<CreateNotificationPage> {
-  late final _color =
-      ValueNotifier<ValueChangedVm<ColorType>>(widget.colorType);
-  late final _icon = ValueNotifier<ValueChangedVm<IconType>>(widget.iconType);
+  late final _color = ValueNotifier<ValueChangedVm<ColorType?>>(widget.color);
+  late final _icon = ValueNotifier<ValueChangedVm<IconType?>>(widget.icon);
 
   @override
   void didUpdateWidget(covariant CreateNotificationPage oldWidget) {
-    if (oldWidget.colorType.value != widget.colorType.value) {
+    if (oldWidget.color.value != widget.color.value) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        _color.value = widget.colorType;
+        _color.value = widget.color;
       });
     }
-    if (oldWidget.iconType.value != widget.iconType.value) {
+    if (oldWidget.icon.value != widget.icon.value) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        _icon.value = widget.iconType;
+        _icon.value = widget.icon;
       });
     }
     super.didUpdateWidget(oldWidget);
@@ -64,7 +63,9 @@ class _CreateNotificationPageState extends State<CreateNotificationPage> {
   Future<void> _showIconPicker(BuildContext context) =>
       showModalBottomSheet<void>(
         context: context,
-        builder: (context) => IconPicker(colorType: _color, iconType: _icon),
+        barrierColor: Colors.transparent,
+        elevation: 3,
+        builder: (context) => IconPicker(color: _color, icon: _icon),
       );
 
   @override
@@ -112,12 +113,18 @@ class _CreateNotificationPageState extends State<CreateNotificationPage> {
                         height: 80,
                         child: DecoratedBox(
                           decoration: BoxDecoration(
+                            color: widget.color.value?.color,
                             borderRadius: BorderRadius.circular(40),
                             border: Border.all(
                               color: ColorName.colon,
                             ),
                           ),
-                          child: widget.iconType.value.icon,
+                          child: widget.icon.value?.icon ??
+                              const Icon(
+                                Icons.image_outlined,
+                                color: ColorName.colon,
+                                size: 48,
+                              ),
                         ),
                       ),
                       const SizedBox(width: 16),

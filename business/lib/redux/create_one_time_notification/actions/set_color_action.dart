@@ -7,7 +7,7 @@ class SetColorAction extends ReduxAction<AppState> {
     required this.colorIndex,
   });
 
-  final int colorIndex;
+  final int? colorIndex;
 
   @override
   AppState reduce() =>

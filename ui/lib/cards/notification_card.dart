@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:localization/generated/l10n.dart';
 
-import '../buttons/rounded__outlined_button.dart';
+import '../buttons/rounded_outlined_button.dart';
 import '../generated/colors.gen.dart';
 import '../models/enum/icon_type.dart';
 import '../rows/card_header.dart';

@@ -57,7 +57,7 @@ class _Factory extends VmFactory<AppState, AppConnector, _Vm> {
   @override
   _Vm fromStore() {
     // if (selectIsSessionAvailable(state)) {
-    // return _Vm(flow: const HomeFlow());
+    return _Vm(flow: const HomeFlow());
     // }
 
     return _Vm(

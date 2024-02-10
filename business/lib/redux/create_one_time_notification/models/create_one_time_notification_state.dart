@@ -10,7 +10,7 @@ class CreateOneTimeNotificationState with _$CreateOneTimeNotificationState {
     String? third,
     String? fourth,
     String? message,
-    @Default(0) int iconIndex,
-    @Default(0) int colorIndex,
+    int? iconIndex,
+    int? colorIndex,
   }) = _CreateOneTimeNotificationState;
 }
