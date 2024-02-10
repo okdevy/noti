@@ -1,5 +1,7 @@
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:models/enum/color_type.dart';
+import 'package:models/enum/icon_type.dart';
 
 part 'one_time_notifications_state.freezed.dart';
 
@@ -22,6 +24,7 @@ class OneTimeNotification with _$OneTimeNotification {
     required int id,
     required DateTime? time,
     required String message,
-    int? icon,
+    IconTypeEnum? icon,
+    ColorTypeEnum? color,
   }) = _OneTimeNotification;
 }

@@ -4,9 +4,9 @@ import 'package:business/redux/one_time_notifications/one_time_notifications_sel
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:ui/cards/notification_card.dart';
-import 'package:ui/models/enum/icon_type.dart';
 import 'package:ui/views/one_time_view.dart';
 
+import '../mappers/icon_type_mapper.dart';
 import '../navigation/routes.dart';
 
 class OneTimeViewConnector extends StatelessWidget {
@@ -41,9 +41,7 @@ class _Factory extends VmFactory<AppState, OneTimeViewConnector, _Vm> {
                     ? TimeOfDay.fromDateTime(notification.time!)
                     : null,
                 message: notification.message,
-                iconType: notification.icon != null
-                    ? IconType.values[notification.icon!]
-                    : null,
+                iconType: notification.icon?.asUI,
               ),
             )
             .toList(growable: false),

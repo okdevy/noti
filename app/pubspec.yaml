@@ -18,6 +18,8 @@ dependencies:
   go_router: ^13.0.1
   localization:
     path: ../localization
+  models:
+    path: ../models
   pro_pretty_logging: ^1.0.3
   pro_validator: ^2.0.1
   ui:

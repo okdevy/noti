@@ -165,7 +165,8 @@ mixin _$OneTimeNotification {
   int get id => throw _privateConstructorUsedError;
   DateTime? get time => throw _privateConstructorUsedError;
   String get message => throw _privateConstructorUsedError;
-  int? get icon => throw _privateConstructorUsedError;
+  IconTypeEnum? get icon => throw _privateConstructorUsedError;
+  ColorTypeEnum? get color => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $OneTimeNotificationCopyWith<OneTimeNotification> get copyWith =>
@@ -178,7 +179,12 @@ abstract class $OneTimeNotificationCopyWith<$Res> {
           OneTimeNotification value, $Res Function(OneTimeNotification) then) =
       _$OneTimeNotificationCopyWithImpl<$Res, OneTimeNotification>;
   @useResult
-  $Res call({int id, DateTime? time, String message, int? icon});
+  $Res call(
+      {int id,
+      DateTime? time,
+      String message,
+      IconTypeEnum? icon,
+      ColorTypeEnum? color});
 }
 
 /// @nodoc
@@ -198,6 +204,7 @@ class _$OneTimeNotificationCopyWithImpl<$Res, $Val extends OneTimeNotification>
     Object? time = freezed,
     Object? message = null,
     Object? icon = freezed,
+    Object? color = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -215,7 +222,11 @@ class _$OneTimeNotificationCopyWithImpl<$Res, $Val extends OneTimeNotification>
       icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as IconTypeEnum?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as ColorTypeEnum?,
     ) as $Val);
   }
 }
@@ -228,7 +239,12 @@ abstract class _$$OneTimeNotificationImplCopyWith<$Res>
       __$$OneTimeNotificationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, DateTime? time, String message, int? icon});
+  $Res call(
+      {int id,
+      DateTime? time,
+      String message,
+      IconTypeEnum? icon,
+      ColorTypeEnum? color});
 }
 
 /// @nodoc
@@ -246,6 +262,7 @@ class __$$OneTimeNotificationImplCopyWithImpl<$Res>
     Object? time = freezed,
     Object? message = null,
     Object? icon = freezed,
+    Object? color = freezed,
   }) {
     return _then(_$OneTimeNotificationImpl(
       id: null == id
@@ -263,7 +280,11 @@ class __$$OneTimeNotificationImplCopyWithImpl<$Res>
       icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as IconTypeEnum?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as ColorTypeEnum?,
     ));
   }
 }
@@ -272,7 +293,11 @@ class __$$OneTimeNotificationImplCopyWithImpl<$Res>
 
 class _$OneTimeNotificationImpl implements _OneTimeNotification {
   const _$OneTimeNotificationImpl(
-      {required this.id, required this.time, required this.message, this.icon});
+      {required this.id,
+      required this.time,
+      required this.message,
+      this.icon,
+      this.color});
 
   @override
   final int id;
@@ -281,11 +306,13 @@ class _$OneTimeNotificationImpl implements _OneTimeNotification {
   @override
   final String message;
   @override
-  final int? icon;
+  final IconTypeEnum? icon;
+  @override
+  final ColorTypeEnum? color;
 
   @override
   String toString() {
-    return 'OneTimeNotification(id: $id, time: $time, message: $message, icon: $icon)';
+    return 'OneTimeNotification(id: $id, time: $time, message: $message, icon: $icon, color: $color)';
   }
 
   @override
@@ -296,11 +323,12 @@ class _$OneTimeNotificationImpl implements _OneTimeNotification {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.time, time) || other.time == time) &&
             (identical(other.message, message) || other.message == message) &&
-            (identical(other.icon, icon) || other.icon == icon));
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.color, color) || other.color == color));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, time, message, icon);
+  int get hashCode => Object.hash(runtimeType, id, time, message, icon, color);
 
   @JsonKey(ignore: true)
   @override
@@ -315,7 +343,8 @@ abstract class _OneTimeNotification implements OneTimeNotification {
       {required final int id,
       required final DateTime? time,
       required final String message,
-      final int? icon}) = _$OneTimeNotificationImpl;
+      final IconTypeEnum? icon,
+      final ColorTypeEnum? color}) = _$OneTimeNotificationImpl;
 
   @override
   int get id;
@@ -324,7 +353,9 @@ abstract class _OneTimeNotification implements OneTimeNotification {
   @override
   String get message;
   @override
-  int? get icon;
+  IconTypeEnum? get icon;
+  @override
+  ColorTypeEnum? get color;
   @override
   @JsonKey(ignore: true)
   _$$OneTimeNotificationImplCopyWith<_$OneTimeNotificationImpl> get copyWith =>
