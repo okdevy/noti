@@ -3,6 +3,8 @@ import 'package:models/enum/color_type.dart';
 import 'package:models/enum/icon_type.dart';
 import 'package:models/enum/notification_type.dart';
 
+import '../../../../notifications/models/notifications_state.dart';
+
 part 'notification_data.g.dart';
 
 @collection
@@ -24,6 +26,13 @@ class NotificationData {
   NotificationTypeEnum type = NotificationTypeEnum.oneTime;
 }
 
-// extension NotificationData on NotificationData {
-//   Notification get as
-// }
+extension NotificationDataExt on NotificationData {
+  Notification get asNotification => Notification(
+        id: id,
+        time: time,
+        message: message!,
+        icon: icon,
+        color: color,
+        type: type,
+      );
+}

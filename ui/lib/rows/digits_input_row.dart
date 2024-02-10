@@ -38,6 +38,7 @@ class _DigitsInputRowState extends State<DigitsInputRow> {
   @override
   void didUpdateWidget(covariant DigitsInputRow oldWidget) {
     if (widget.first.value != oldWidget.first.value &&
+        widget.first.value != null &&
         widget.first.value!.isEmpty) {
       _firstController.text = widget.first.value ?? '';
     }

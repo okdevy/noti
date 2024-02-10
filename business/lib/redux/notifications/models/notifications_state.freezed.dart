@@ -17,7 +17,6 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$NotificationsState {
   IMap<int, Notification> get table => throw _privateConstructorUsedError;
-  IList<int> get view => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $NotificationsStateCopyWith<NotificationsState> get copyWith =>
@@ -30,7 +29,7 @@ abstract class $NotificationsStateCopyWith<$Res> {
           NotificationsState value, $Res Function(NotificationsState) then) =
       _$NotificationsStateCopyWithImpl<$Res, NotificationsState>;
   @useResult
-  $Res call({IMap<int, Notification> table, IList<int> view});
+  $Res call({IMap<int, Notification> table});
 }
 
 /// @nodoc
@@ -47,17 +46,12 @@ class _$NotificationsStateCopyWithImpl<$Res, $Val extends NotificationsState>
   @override
   $Res call({
     Object? table = null,
-    Object? view = null,
   }) {
     return _then(_value.copyWith(
       table: null == table
           ? _value.table
           : table // ignore: cast_nullable_to_non_nullable
               as IMap<int, Notification>,
-      view: null == view
-          ? _value.view
-          : view // ignore: cast_nullable_to_non_nullable
-              as IList<int>,
     ) as $Val);
   }
 }
@@ -70,7 +64,7 @@ abstract class _$$NotificationsStateImplCopyWith<$Res>
       __$$NotificationsStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({IMap<int, Notification> table, IList<int> view});
+  $Res call({IMap<int, Notification> table});
 }
 
 /// @nodoc
@@ -85,17 +79,12 @@ class __$$NotificationsStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? table = null,
-    Object? view = null,
   }) {
     return _then(_$NotificationsStateImpl(
       table: null == table
           ? _value.table
           : table // ignore: cast_nullable_to_non_nullable
               as IMap<int, Notification>,
-      view: null == view
-          ? _value.view
-          : view // ignore: cast_nullable_to_non_nullable
-              as IList<int>,
     ));
   }
 }
@@ -104,19 +93,15 @@ class __$$NotificationsStateImplCopyWithImpl<$Res>
 
 class _$NotificationsStateImpl implements _NotificationsState {
   const _$NotificationsStateImpl(
-      {this.table = const IMapConst<int, Notification>({}),
-      this.view = const IListConst<int>([])});
+      {this.table = const IMapConst<int, Notification>({})});
 
   @override
   @JsonKey()
   final IMap<int, Notification> table;
-  @override
-  @JsonKey()
-  final IList<int> view;
 
   @override
   String toString() {
-    return 'NotificationsState(table: $table, view: $view)';
+    return 'NotificationsState(table: $table)';
   }
 
   @override
@@ -124,13 +109,11 @@ class _$NotificationsStateImpl implements _NotificationsState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NotificationsStateImpl &&
-            (identical(other.table, table) || other.table == table) &&
-            const DeepCollectionEquality().equals(other.view, view));
+            (identical(other.table, table) || other.table == table));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, table, const DeepCollectionEquality().hash(view));
+  int get hashCode => Object.hash(runtimeType, table);
 
   @JsonKey(ignore: true)
   @override
@@ -141,14 +124,11 @@ class _$NotificationsStateImpl implements _NotificationsState {
 }
 
 abstract class _NotificationsState implements NotificationsState {
-  const factory _NotificationsState(
-      {final IMap<int, Notification> table,
-      final IList<int> view}) = _$NotificationsStateImpl;
+  const factory _NotificationsState({final IMap<int, Notification> table}) =
+      _$NotificationsStateImpl;
 
   @override
   IMap<int, Notification> get table;
-  @override
-  IList<int> get view;
   @override
   @JsonKey(ignore: true)
   _$$NotificationsStateImplCopyWith<_$NotificationsStateImpl> get copyWith =>
@@ -162,6 +142,7 @@ mixin _$Notification {
   String get message => throw _privateConstructorUsedError;
   IconTypeEnum? get icon => throw _privateConstructorUsedError;
   ColorTypeEnum? get color => throw _privateConstructorUsedError;
+  NotificationTypeEnum? get type => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $NotificationCopyWith<Notification> get copyWith =>
@@ -179,7 +160,8 @@ abstract class $NotificationCopyWith<$Res> {
       DateTime? time,
       String message,
       IconTypeEnum? icon,
-      ColorTypeEnum? color});
+      ColorTypeEnum? color,
+      NotificationTypeEnum? type});
 }
 
 /// @nodoc
@@ -200,6 +182,7 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
     Object? message = null,
     Object? icon = freezed,
     Object? color = freezed,
+    Object? type = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -222,6 +205,10 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as ColorTypeEnum?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as NotificationTypeEnum?,
     ) as $Val);
   }
 }
@@ -239,7 +226,8 @@ abstract class _$$NotificationImplCopyWith<$Res>
       DateTime? time,
       String message,
       IconTypeEnum? icon,
-      ColorTypeEnum? color});
+      ColorTypeEnum? color,
+      NotificationTypeEnum? type});
 }
 
 /// @nodoc
@@ -258,6 +246,7 @@ class __$$NotificationImplCopyWithImpl<$Res>
     Object? message = null,
     Object? icon = freezed,
     Object? color = freezed,
+    Object? type = freezed,
   }) {
     return _then(_$NotificationImpl(
       id: null == id
@@ -280,6 +269,10 @@ class __$$NotificationImplCopyWithImpl<$Res>
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as ColorTypeEnum?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as NotificationTypeEnum?,
     ));
   }
 }
@@ -292,7 +285,8 @@ class _$NotificationImpl implements _Notification {
       required this.time,
       required this.message,
       this.icon,
-      this.color});
+      this.color,
+      this.type});
 
   @override
   final int id;
@@ -304,10 +298,12 @@ class _$NotificationImpl implements _Notification {
   final IconTypeEnum? icon;
   @override
   final ColorTypeEnum? color;
+  @override
+  final NotificationTypeEnum? type;
 
   @override
   String toString() {
-    return 'Notification(id: $id, time: $time, message: $message, icon: $icon, color: $color)';
+    return 'Notification(id: $id, time: $time, message: $message, icon: $icon, color: $color, type: $type)';
   }
 
   @override
@@ -319,11 +315,13 @@ class _$NotificationImpl implements _Notification {
             (identical(other.time, time) || other.time == time) &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.icon, icon) || other.icon == icon) &&
-            (identical(other.color, color) || other.color == color));
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.type, type) || other.type == type));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, time, message, icon, color);
+  int get hashCode =>
+      Object.hash(runtimeType, id, time, message, icon, color, type);
 
   @JsonKey(ignore: true)
   @override
@@ -338,7 +336,8 @@ abstract class _Notification implements Notification {
       required final DateTime? time,
       required final String message,
       final IconTypeEnum? icon,
-      final ColorTypeEnum? color}) = _$NotificationImpl;
+      final ColorTypeEnum? color,
+      final NotificationTypeEnum? type}) = _$NotificationImpl;
 
   @override
   int get id;
@@ -350,6 +349,8 @@ abstract class _Notification implements Notification {
   IconTypeEnum? get icon;
   @override
   ColorTypeEnum? get color;
+  @override
+  NotificationTypeEnum? get type;
   @override
   @JsonKey(ignore: true)
   _$$NotificationImplCopyWith<_$NotificationImpl> get copyWith =>

@@ -67,7 +67,11 @@ class IconSelector extends StatelessWidget {
                                       color: ColorName.colon,
                                     ),
                                   ),
-                                  child: e.icon,
+                                  child: SizedBox(
+                                    width: 40,
+                                    height: 40,
+                                    child: e.icon40,
+                                  ),
                                 ),
                               ),
                             ),

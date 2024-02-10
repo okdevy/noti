@@ -8,14 +8,14 @@ bool selectNotificationsIsWaiting(AppState state) =>
     state.wait.isWaitingFor(NotificationsWaiting.wait);
 
 /// Returns [IMap<int, OneTimeNotification>] table
-IMap<int, Notification> selectOneTimeNotificationsTable(
+IMap<int, Notification> selectNotificationsTable(
   AppState state,
 ) =>
     state.notifications.table;
 
 /// Returns [Notification] value by id
-Notification selectOneTimeNotificationsById(
+Notification selectNotificationsById(
   AppState state, {
   required int id,
 }) =>
-    selectOneTimeNotificationsTable(state)[id]!;
+    selectNotificationsTable(state)[id]!;

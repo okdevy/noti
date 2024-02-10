@@ -25,6 +25,7 @@ class CardHeader extends StatelessWidget {
               ? [
                   SizedBox(
                     height: 32,
+                    width: 32,
                     child: DecoratedBox(
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
@@ -34,7 +35,7 @@ class CardHeader extends StatelessWidget {
                           ),
                         ),
                       ),
-                      child: icon!.icon,
+                      child: icon!.icon20,
                     ),
                   ),
                   GestureDetector(

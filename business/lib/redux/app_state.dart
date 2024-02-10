@@ -5,7 +5,7 @@ import 'connectivity/models/connectivity_state.dart';
 import 'create_one_time/models/create_one_time_state.dart';
 import 'forgot_password/models/forgot_password_state.dart';
 import 'log_in/models/log_in_state.dart';
-import 'one_time_notifications/models/notifications_state.dart';
+import 'notifications/models/notifications_state.dart';
 import 'one_time_view/models/one_time_view_state.dart';
 import 'registration/models/registration_state.dart';
 import 'reset_password/models/reset_password_state.dart';

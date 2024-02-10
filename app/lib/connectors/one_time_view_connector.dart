@@ -1,6 +1,7 @@
 import 'package:async_redux/async_redux.dart';
 import 'package:business/redux/app_state.dart';
-import 'package:business/redux/one_time_notifications/one_time_notifications_selectors.dart';
+import 'package:business/redux/notifications/notifications_selectors.dart';
+import 'package:business/redux/one_time_view/one_time_view_selectors.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:ui/cards/notification_card.dart';
@@ -31,19 +32,21 @@ class _Factory extends VmFactory<AppState, OneTimeViewConnector, _Vm> {
 
   @override
   _Vm fromStore() {
-    final notifications = selectOneTimeNotificationsTable(state);
+    final view = selectOneTimeView(state).reversed;
 
     return _Vm(
       oneTimeView: OneTimeViewVm(
-        items: notifications.values
-            .map(
-              (notification) => NotificationCardVm(
-                time: FormattedDate.hours(notification.time),
-                message: notification.message,
-                iconType: notification.icon.asUI,
-              ),
-            )
-            .toList(growable: false),
+        items: view.map(
+          (id) {
+            final notification = selectNotificationsById(state, id: id);
+
+            return NotificationCardVm(
+              time: FormattedDate.hours(notification.time),
+              message: notification.message,
+              iconType: notification.icon.asUI,
+            );
+          },
+        ).toList(growable: false),
         onPressedAdd: () async =>
             router.pushNamed(Routes.createOneTimeNotification),
       ),

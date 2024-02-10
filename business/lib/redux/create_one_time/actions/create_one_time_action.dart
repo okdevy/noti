@@ -1,10 +1,11 @@
 import 'package:async_redux/async_redux.dart';
 import 'package:intl/intl.dart';
+import 'package:models/enum/notification_type.dart';
 
 import '../../../service_locator.dart';
 import '../../app_state.dart';
-import '../../one_time_notifications/actions/add_one_time_notifications_action.dart';
-import '../../one_time_notifications/models/notifications_state.dart';
+import '../../notifications/actions/add_notification_action.dart';
+import '../../notifications/models/notifications_state.dart';
 import '../../services/isar/src/models/notification_data.dart';
 import '../create_one_time_notification_selectors.dart';
 import '../models/create_one_time_state.dart';
@@ -40,7 +41,8 @@ class CreateOneTimeAction extends ReduxAction<AppState> {
 
     final data = NotificationData()
       ..message = message
-      ..time = time;
+      ..time = time
+      ..type = NotificationTypeEnum.oneTime;
 
     if (icon != null) {
       data.icon = icon;
@@ -58,10 +60,11 @@ class CreateOneTimeAction extends ReduxAction<AppState> {
       time: time,
       icon: icon,
       color: color,
+      type: NotificationTypeEnum.oneTime,
     );
 
     dispatchSync(
-      AddOneTimeNotificationsAction(oneTimeNotification: notification),
+      AddNotificationAction(notification: notification),
       notify: false,
     );
 

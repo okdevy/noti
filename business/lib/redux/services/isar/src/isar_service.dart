@@ -3,14 +3,32 @@ import 'dart:async';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
 
+import '../../../../common/services/interface.dart';
 import 'models/notification_data.dart';
 
-class IsarService {
+// ignore: one_member_abstracts
+abstract class IsarServiceDriverInterface {
+  void onChange();
+}
+
+class IsarService extends DisposableServiceInterface {
   IsarService({
     required Isar db,
+    // required IsarServiceDriverInterface driver,
   }) : _db = db;
+  // _driver = driver;
 
   late final Isar _db;
+  // late final IsarServiceDriverInterface _driver;
+  StreamSubscription<void>? _notificationsWatcher;
+
+  @override
+  Future<void> dispose() async {
+    super.dispose();
+    await _notificationsWatcher?.cancel();
+    _notificationsWatcher = null;
+    await _db.close();
+  }
 
   static Future<Isar> openDatabase() async {
     if (Isar.instanceNames.isEmpty) {

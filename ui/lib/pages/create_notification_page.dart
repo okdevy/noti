@@ -152,7 +152,7 @@ class _CreateNotificationPageState extends State<CreateNotificationPage> {
                               color: ColorName.colon,
                             ),
                           ),
-                          child: widget.icon.value?.icon ??
+                          child: widget.icon.value?.icon40 ??
                               const Icon(
                                 Icons.image_outlined,
                                 color: ColorName.colon,

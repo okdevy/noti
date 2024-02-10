@@ -5,15 +5,15 @@ import '../one_time_view_selectors.dart';
 
 class AddOneTimeIdAction extends ReduxAction<AppState> {
   AddOneTimeIdAction({
-    required this.oneTimeId,
+    required this.notificationId,
   });
 
-  final int oneTimeId;
+  final int notificationId;
 
   @override
   AppState reduce() {
     final view = selectOneTimeView(state);
-    final newView = view.add(oneTimeId);
+    final newView = view.add(notificationId);
 
     return state.copyWith.oneTimeView(view: newView);
   }
