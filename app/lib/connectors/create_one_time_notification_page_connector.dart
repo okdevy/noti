@@ -1,13 +1,15 @@
 import 'package:async_redux/async_redux.dart';
 import 'package:business/redux/app_state.dart';
+import 'package:business/redux/create_one_time/actions/clean_up_create_one_time_action.dart';
 import 'package:business/redux/create_one_time/actions/create_one_time_action.dart';
 import 'package:business/redux/create_one_time/actions/set_color_action.dart';
+import 'package:business/redux/create_one_time/actions/set_first_action.dart';
+import 'package:business/redux/create_one_time/actions/set_fourth_action.dart';
 import 'package:business/redux/create_one_time/actions/set_icon_action.dart';
+import 'package:business/redux/create_one_time/actions/set_message_action.dart';
+import 'package:business/redux/create_one_time/actions/set_second_action.dart';
+import 'package:business/redux/create_one_time/actions/set_third_action.dart';
 import 'package:business/redux/create_one_time/create_one_time_notification_selectors.dart';
-import 'package:business/redux/log_in/actions/set_first_action.dart';
-import 'package:business/redux/log_in/actions/set_fourth_action.dart';
-import 'package:business/redux/log_in/actions/set_second_action.dart';
-import 'package:business/redux/log_in/actions/set_third_action.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:ui/models/enum/color_type.dart';
@@ -17,6 +19,7 @@ import 'package:ui/pages/create_notification_page.dart';
 
 import '../mappers/color_type_mapper.dart';
 import '../mappers/icon_type_mapper.dart';
+import '../navigation/routes.dart';
 
 class CreateOneTimeNotificationPageConnector extends StatelessWidget {
   const CreateOneTimeNotificationPageConnector({
@@ -27,6 +30,7 @@ class CreateOneTimeNotificationPageConnector extends StatelessWidget {
   Widget build(BuildContext context) => StoreConnector<AppState, _Vm>(
         debug: this,
         vm: () => _Factory(this),
+        onDispose: (store) => store.dispatchSync(CleanUpCreateOneTimeAction()),
         builder: (context, vm) => CreateNotificationPage(
           message: vm.message,
           first: vm.first,
@@ -54,11 +58,12 @@ class _Factory
     final message = selectCreateOneTimeMessage(state);
     final icon = selectCreateOneTimeIcon(state);
     final color = selectCreateOneTimeColor(state);
+    final isValid = selectCreateOneTimeIsValid(state);
 
     return _Vm(
       message: ValueChangedWithErrorVm<String?>(
         value: message,
-        onChanged: (value) {},
+        onChanged: (value) => dispatchSync(SetMessageAction(value: value!)),
       ),
       first: ValueChangedVm(
         value: first,
@@ -85,7 +90,15 @@ class _Factory
         onChanged: (value) =>
             dispatchSync(SetColorAction(color: value.asModel)),
       ),
-      onPressedConfirm: () => dispatchSync(CreateOneTimeAction()),
+      onPressedConfirm: isValid
+          ? () async {
+              final result = await dispatchAsync(CreateOneTimeAction());
+
+              if (result.isFinished) {
+                router.pop();
+              }
+            }
+          : null,
     );
   }
 }

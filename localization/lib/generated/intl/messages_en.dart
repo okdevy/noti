@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "addNewNotification":
             MessageLookupByLibrary.simpleMessage("Add new notification"),
+        "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "backToLogIn": MessageLookupByLibrary.simpleMessage("Back to logIn"),
         "backgroundColors":
             MessageLookupByLibrary.simpleMessage("Background colors"),
@@ -35,6 +36,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "couldNotConnectToInternet": MessageLookupByLibrary.simpleMessage(
             "Couldn\'t connect to internet."),
+        "doYouWantToDiscardUnsavedChanges":
+            MessageLookupByLibrary.simpleMessage(
+                "Do you want to discard unsaved changes?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailInvalid":
             MessageLookupByLibrary.simpleMessage("Email is invalid"),
@@ -54,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Must contain at least one lowercase"),
         "mustContainAtLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one uppercase"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "oneTime": MessageLookupByLibrary.simpleMessage("One-time"),
@@ -78,6 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("This field is required"),
         "time": MessageLookupByLibrary.simpleMessage("Time: "),
         "title": MessageLookupByLibrary.simpleMessage("title"),
-        "typeTime": MessageLookupByLibrary.simpleMessage("Type time")
+        "typeTime": MessageLookupByLibrary.simpleMessage("Type time"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

@@ -1,9 +1,9 @@
-import 'package:intl/intl.dart' as intl;
+import 'package:intl/intl.dart';
 
 String toHours(DateTime? dt) {
   if (dt == null) {
     return '';
   }
 
-  return intl.jm().format(dt);
+  return DateFormat.jm().format(dt);
 }

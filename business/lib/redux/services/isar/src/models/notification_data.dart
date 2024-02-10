@@ -23,3 +23,7 @@ class NotificationData {
   @enumerated
   NotificationTypeEnum type = NotificationTypeEnum.oneTime;
 }
+
+// extension NotificationData on NotificationData {
+//   Notification get as
+// }

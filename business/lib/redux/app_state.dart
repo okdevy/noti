@@ -5,7 +5,8 @@ import 'connectivity/models/connectivity_state.dart';
 import 'create_one_time/models/create_one_time_state.dart';
 import 'forgot_password/models/forgot_password_state.dart';
 import 'log_in/models/log_in_state.dart';
-import 'one_time_notifications/models/one_time_notifications_state.dart';
+import 'one_time_notifications/models/notifications_state.dart';
+import 'one_time_view/models/one_time_view_state.dart';
 import 'registration/models/registration_state.dart';
 import 'reset_password/models/reset_password_state.dart';
 import 'session/models/session_state.dart';
@@ -22,8 +23,9 @@ class AppState with _$AppState {
     required ForgotPasswordState forgotPassword,
     required ResetPasswordState resetPassword,
     required SessionState session,
-    required OneTimeNotificationsState oneTimeNotifications,
+    required NotificationsState notifications,
     required CreateOneTimeState createOneTime,
+    required OneTimeViewState oneTimeView,
   }) = _AppState;
 
   factory AppState.initial() => const AppState(
@@ -34,7 +36,8 @@ class AppState with _$AppState {
         forgotPassword: ForgotPasswordState(),
         resetPassword: ResetPasswordState(),
         session: SessionState(),
-        oneTimeNotifications: OneTimeNotificationsState(),
+        notifications: NotificationsState(),
         createOneTime: CreateOneTimeState(),
+        oneTimeView: OneTimeViewState(),
       );
 }

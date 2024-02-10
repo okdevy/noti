@@ -19,7 +19,7 @@ class CardMessage extends StatelessWidget {
           Expanded(
             child: RichText(
               text: TextSpan(
-                text: S.current.message,
+                text: S.current.messageColon,
                 style: const TextStyle(
                   color: ColorName.subtitle,
                   fontSize: 14,

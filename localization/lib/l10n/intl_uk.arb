@@ -38,5 +38,9 @@
     "selectIcon": "Виберіть іконку",
     "iconStyle": "Стиль іконки",
     "backgroundColors": "Колір фону",
-    "selectIcons": "Виберіть іконку"
+    "selectIcons": "Виберіть іконку",
+    "areYouSure": "Are you sure?",
+    "doYouWantToDiscardUnsavedChanges": "Ви хочете видалити незбережені зміни?",
+    "no": "Ні",
+    "yes": "Так"
 }

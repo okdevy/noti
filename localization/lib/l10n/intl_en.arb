@@ -38,5 +38,9 @@
     "selectIcon": "Select icon",
     "iconStyle": "Icon style",
     "backgroundColors": "Background colors",
-    "selectIcons": "Select icons"
+    "selectIcons": "Select icons",
+    "areYouSure": "Are you sure?",
+    "doYouWantToDiscardUnsavedChanges": "Do you want to discard unsaved changes?",
+    "no": "No",
+    "yes": "Yes"
 }

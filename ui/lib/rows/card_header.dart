@@ -3,6 +3,7 @@ import 'package:localization/generated/l10n.dart';
 
 import '../generated/colors.gen.dart';
 import '../models/enum/icon_type.dart';
+import '../models/formatted_date.dart';
 
 class CardHeader extends StatelessWidget {
   const CardHeader({
@@ -11,7 +12,7 @@ class CardHeader extends StatelessWidget {
     super.key,
   });
 
-  final TimeOfDay? time;
+  final FormattedDate? time;
   final IconType? icon;
 
   @override
@@ -40,7 +41,6 @@ class CardHeader extends StatelessWidget {
                     child: const Icon(
                       Icons.delete_forever,
                       color: ColorName.mainRed,
-                      size: 24,
                     ),
                   ),
                 ]
@@ -57,7 +57,7 @@ class CardHeader extends StatelessWidget {
                         ),
                         children: [
                           TextSpan(
-                            text: time?.format(context),
+                            text: time?.formatted,
                             style: const TextStyle(
                               color: ColorName.black,
                               fontSize: 14,

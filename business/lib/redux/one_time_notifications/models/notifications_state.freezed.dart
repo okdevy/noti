@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'one_time_notifications_state.dart';
+part of 'notifications_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,30 +15,28 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$OneTimeNotificationsState {
-  IMap<int, OneTimeNotification> get table =>
-      throw _privateConstructorUsedError;
+mixin _$NotificationsState {
+  IMap<int, Notification> get table => throw _privateConstructorUsedError;
   IList<int> get view => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $OneTimeNotificationsStateCopyWith<OneTimeNotificationsState> get copyWith =>
+  $NotificationsStateCopyWith<NotificationsState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $OneTimeNotificationsStateCopyWith<$Res> {
-  factory $OneTimeNotificationsStateCopyWith(OneTimeNotificationsState value,
-          $Res Function(OneTimeNotificationsState) then) =
-      _$OneTimeNotificationsStateCopyWithImpl<$Res, OneTimeNotificationsState>;
+abstract class $NotificationsStateCopyWith<$Res> {
+  factory $NotificationsStateCopyWith(
+          NotificationsState value, $Res Function(NotificationsState) then) =
+      _$NotificationsStateCopyWithImpl<$Res, NotificationsState>;
   @useResult
-  $Res call({IMap<int, OneTimeNotification> table, IList<int> view});
+  $Res call({IMap<int, Notification> table, IList<int> view});
 }
 
 /// @nodoc
-class _$OneTimeNotificationsStateCopyWithImpl<$Res,
-        $Val extends OneTimeNotificationsState>
-    implements $OneTimeNotificationsStateCopyWith<$Res> {
-  _$OneTimeNotificationsStateCopyWithImpl(this._value, this._then);
+class _$NotificationsStateCopyWithImpl<$Res, $Val extends NotificationsState>
+    implements $NotificationsStateCopyWith<$Res> {
+  _$NotificationsStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -55,7 +53,7 @@ class _$OneTimeNotificationsStateCopyWithImpl<$Res,
       table: null == table
           ? _value.table
           : table // ignore: cast_nullable_to_non_nullable
-              as IMap<int, OneTimeNotification>,
+              as IMap<int, Notification>,
       view: null == view
           ? _value.view
           : view // ignore: cast_nullable_to_non_nullable
@@ -65,25 +63,22 @@ class _$OneTimeNotificationsStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$OneTimeNotificationsStateImplCopyWith<$Res>
-    implements $OneTimeNotificationsStateCopyWith<$Res> {
-  factory _$$OneTimeNotificationsStateImplCopyWith(
-          _$OneTimeNotificationsStateImpl value,
-          $Res Function(_$OneTimeNotificationsStateImpl) then) =
-      __$$OneTimeNotificationsStateImplCopyWithImpl<$Res>;
+abstract class _$$NotificationsStateImplCopyWith<$Res>
+    implements $NotificationsStateCopyWith<$Res> {
+  factory _$$NotificationsStateImplCopyWith(_$NotificationsStateImpl value,
+          $Res Function(_$NotificationsStateImpl) then) =
+      __$$NotificationsStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({IMap<int, OneTimeNotification> table, IList<int> view});
+  $Res call({IMap<int, Notification> table, IList<int> view});
 }
 
 /// @nodoc
-class __$$OneTimeNotificationsStateImplCopyWithImpl<$Res>
-    extends _$OneTimeNotificationsStateCopyWithImpl<$Res,
-        _$OneTimeNotificationsStateImpl>
-    implements _$$OneTimeNotificationsStateImplCopyWith<$Res> {
-  __$$OneTimeNotificationsStateImplCopyWithImpl(
-      _$OneTimeNotificationsStateImpl _value,
-      $Res Function(_$OneTimeNotificationsStateImpl) _then)
+class __$$NotificationsStateImplCopyWithImpl<$Res>
+    extends _$NotificationsStateCopyWithImpl<$Res, _$NotificationsStateImpl>
+    implements _$$NotificationsStateImplCopyWith<$Res> {
+  __$$NotificationsStateImplCopyWithImpl(_$NotificationsStateImpl _value,
+      $Res Function(_$NotificationsStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,11 +87,11 @@ class __$$OneTimeNotificationsStateImplCopyWithImpl<$Res>
     Object? table = null,
     Object? view = null,
   }) {
-    return _then(_$OneTimeNotificationsStateImpl(
+    return _then(_$NotificationsStateImpl(
       table: null == table
           ? _value.table
           : table // ignore: cast_nullable_to_non_nullable
-              as IMap<int, OneTimeNotification>,
+              as IMap<int, Notification>,
       view: null == view
           ? _value.view
           : view // ignore: cast_nullable_to_non_nullable
@@ -107,28 +102,28 @@ class __$$OneTimeNotificationsStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OneTimeNotificationsStateImpl implements _OneTimeNotificationsState {
-  const _$OneTimeNotificationsStateImpl(
-      {this.table = const IMapConst<int, OneTimeNotification>({}),
+class _$NotificationsStateImpl implements _NotificationsState {
+  const _$NotificationsStateImpl(
+      {this.table = const IMapConst<int, Notification>({}),
       this.view = const IListConst<int>([])});
 
   @override
   @JsonKey()
-  final IMap<int, OneTimeNotification> table;
+  final IMap<int, Notification> table;
   @override
   @JsonKey()
   final IList<int> view;
 
   @override
   String toString() {
-    return 'OneTimeNotificationsState(table: $table, view: $view)';
+    return 'NotificationsState(table: $table, view: $view)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$OneTimeNotificationsStateImpl &&
+            other is _$NotificationsStateImpl &&
             (identical(other.table, table) || other.table == table) &&
             const DeepCollectionEquality().equals(other.view, view));
   }
@@ -140,28 +135,28 @@ class _$OneTimeNotificationsStateImpl implements _OneTimeNotificationsState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$OneTimeNotificationsStateImplCopyWith<_$OneTimeNotificationsStateImpl>
-      get copyWith => __$$OneTimeNotificationsStateImplCopyWithImpl<
-          _$OneTimeNotificationsStateImpl>(this, _$identity);
+  _$$NotificationsStateImplCopyWith<_$NotificationsStateImpl> get copyWith =>
+      __$$NotificationsStateImplCopyWithImpl<_$NotificationsStateImpl>(
+          this, _$identity);
 }
 
-abstract class _OneTimeNotificationsState implements OneTimeNotificationsState {
-  const factory _OneTimeNotificationsState(
-      {final IMap<int, OneTimeNotification> table,
-      final IList<int> view}) = _$OneTimeNotificationsStateImpl;
+abstract class _NotificationsState implements NotificationsState {
+  const factory _NotificationsState(
+      {final IMap<int, Notification> table,
+      final IList<int> view}) = _$NotificationsStateImpl;
 
   @override
-  IMap<int, OneTimeNotification> get table;
+  IMap<int, Notification> get table;
   @override
   IList<int> get view;
   @override
   @JsonKey(ignore: true)
-  _$$OneTimeNotificationsStateImplCopyWith<_$OneTimeNotificationsStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$NotificationsStateImplCopyWith<_$NotificationsStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$OneTimeNotification {
+mixin _$Notification {
   int get id => throw _privateConstructorUsedError;
   DateTime? get time => throw _privateConstructorUsedError;
   String get message => throw _privateConstructorUsedError;
@@ -169,15 +164,15 @@ mixin _$OneTimeNotification {
   ColorTypeEnum? get color => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $OneTimeNotificationCopyWith<OneTimeNotification> get copyWith =>
+  $NotificationCopyWith<Notification> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $OneTimeNotificationCopyWith<$Res> {
-  factory $OneTimeNotificationCopyWith(
-          OneTimeNotification value, $Res Function(OneTimeNotification) then) =
-      _$OneTimeNotificationCopyWithImpl<$Res, OneTimeNotification>;
+abstract class $NotificationCopyWith<$Res> {
+  factory $NotificationCopyWith(
+          Notification value, $Res Function(Notification) then) =
+      _$NotificationCopyWithImpl<$Res, Notification>;
   @useResult
   $Res call(
       {int id,
@@ -188,9 +183,9 @@ abstract class $OneTimeNotificationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$OneTimeNotificationCopyWithImpl<$Res, $Val extends OneTimeNotification>
-    implements $OneTimeNotificationCopyWith<$Res> {
-  _$OneTimeNotificationCopyWithImpl(this._value, this._then);
+class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
+    implements $NotificationCopyWith<$Res> {
+  _$NotificationCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -232,11 +227,11 @@ class _$OneTimeNotificationCopyWithImpl<$Res, $Val extends OneTimeNotification>
 }
 
 /// @nodoc
-abstract class _$$OneTimeNotificationImplCopyWith<$Res>
-    implements $OneTimeNotificationCopyWith<$Res> {
-  factory _$$OneTimeNotificationImplCopyWith(_$OneTimeNotificationImpl value,
-          $Res Function(_$OneTimeNotificationImpl) then) =
-      __$$OneTimeNotificationImplCopyWithImpl<$Res>;
+abstract class _$$NotificationImplCopyWith<$Res>
+    implements $NotificationCopyWith<$Res> {
+  factory _$$NotificationImplCopyWith(
+          _$NotificationImpl value, $Res Function(_$NotificationImpl) then) =
+      __$$NotificationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -248,11 +243,11 @@ abstract class _$$OneTimeNotificationImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$OneTimeNotificationImplCopyWithImpl<$Res>
-    extends _$OneTimeNotificationCopyWithImpl<$Res, _$OneTimeNotificationImpl>
-    implements _$$OneTimeNotificationImplCopyWith<$Res> {
-  __$$OneTimeNotificationImplCopyWithImpl(_$OneTimeNotificationImpl _value,
-      $Res Function(_$OneTimeNotificationImpl) _then)
+class __$$NotificationImplCopyWithImpl<$Res>
+    extends _$NotificationCopyWithImpl<$Res, _$NotificationImpl>
+    implements _$$NotificationImplCopyWith<$Res> {
+  __$$NotificationImplCopyWithImpl(
+      _$NotificationImpl _value, $Res Function(_$NotificationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -264,7 +259,7 @@ class __$$OneTimeNotificationImplCopyWithImpl<$Res>
     Object? icon = freezed,
     Object? color = freezed,
   }) {
-    return _then(_$OneTimeNotificationImpl(
+    return _then(_$NotificationImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -291,8 +286,8 @@ class __$$OneTimeNotificationImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OneTimeNotificationImpl implements _OneTimeNotification {
-  const _$OneTimeNotificationImpl(
+class _$NotificationImpl implements _Notification {
+  const _$NotificationImpl(
       {required this.id,
       required this.time,
       required this.message,
@@ -312,14 +307,14 @@ class _$OneTimeNotificationImpl implements _OneTimeNotification {
 
   @override
   String toString() {
-    return 'OneTimeNotification(id: $id, time: $time, message: $message, icon: $icon, color: $color)';
+    return 'Notification(id: $id, time: $time, message: $message, icon: $icon, color: $color)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$OneTimeNotificationImpl &&
+            other is _$NotificationImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.time, time) || other.time == time) &&
             (identical(other.message, message) || other.message == message) &&
@@ -333,18 +328,17 @@ class _$OneTimeNotificationImpl implements _OneTimeNotification {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$OneTimeNotificationImplCopyWith<_$OneTimeNotificationImpl> get copyWith =>
-      __$$OneTimeNotificationImplCopyWithImpl<_$OneTimeNotificationImpl>(
-          this, _$identity);
+  _$$NotificationImplCopyWith<_$NotificationImpl> get copyWith =>
+      __$$NotificationImplCopyWithImpl<_$NotificationImpl>(this, _$identity);
 }
 
-abstract class _OneTimeNotification implements OneTimeNotification {
-  const factory _OneTimeNotification(
+abstract class _Notification implements Notification {
+  const factory _Notification(
       {required final int id,
       required final DateTime? time,
       required final String message,
       final IconTypeEnum? icon,
-      final ColorTypeEnum? color}) = _$OneTimeNotificationImpl;
+      final ColorTypeEnum? color}) = _$NotificationImpl;
 
   @override
   int get id;
@@ -358,6 +352,6 @@ abstract class _OneTimeNotification implements OneTimeNotification {
   ColorTypeEnum? get color;
   @override
   @JsonKey(ignore: true)
-  _$$OneTimeNotificationImplCopyWith<_$OneTimeNotificationImpl> get copyWith =>
+  _$$NotificationImplCopyWith<_$NotificationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

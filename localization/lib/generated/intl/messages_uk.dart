@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "addNewNotification":
             MessageLookupByLibrary.simpleMessage("Додати нову нотифікацію"),
+        "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "backToLogIn": MessageLookupByLibrary.simpleMessage("Back to logIn"),
         "backgroundColors": MessageLookupByLibrary.simpleMessage("Колір фону"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -34,6 +35,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "couldNotConnectToInternet": MessageLookupByLibrary.simpleMessage(
             "Couldn\'t connect to internet."),
+        "doYouWantToDiscardUnsavedChanges":
+            MessageLookupByLibrary.simpleMessage(
+                "Ви хочете видалити незбережені зміни?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailInvalid":
             MessageLookupByLibrary.simpleMessage("Email is invalid"),
@@ -54,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Must contain at least one lowercase"),
         "mustContainAtLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one uppercase"),
+        "no": MessageLookupByLibrary.simpleMessage("Ні"),
         "notifications": MessageLookupByLibrary.simpleMessage("Нотифікації"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "oneTime": MessageLookupByLibrary.simpleMessage("Одноразові"),
@@ -78,6 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("This field is required"),
         "time": MessageLookupByLibrary.simpleMessage("Час: "),
         "title": MessageLookupByLibrary.simpleMessage("Title"),
-        "typeTime": MessageLookupByLibrary.simpleMessage("Введіть час")
+        "typeTime": MessageLookupByLibrary.simpleMessage("Введіть час"),
+        "yes": MessageLookupByLibrary.simpleMessage("Так")
       };
 }

@@ -449,6 +449,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Are you sure?`
+  String get areYouSure {
+    return Intl.message(
+      'Are you sure?',
+      name: 'areYouSure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to discard unsaved changes?`
+  String get doYouWantToDiscardUnsavedChanges {
+    return Intl.message(
+      'Do you want to discard unsaved changes?',
+      name: 'doYouWantToDiscardUnsavedChanges',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

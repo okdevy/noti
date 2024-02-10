@@ -26,3 +26,18 @@ IconTypeEnum? selectCreateOneTimeIcon(AppState state) =>
 /// Returns [ColorTypeEnum?] color type
 ColorTypeEnum? selectCreateOneTimeColor(AppState state) =>
     state.createOneTime.color;
+
+/// Returns [bool] true if the create one time notification page is valid
+bool selectCreateOneTimeIsValid(AppState state) {
+  final first = selectCreateOneTimeFirst(state);
+  final second = selectCreateOneTimeSecond(state);
+  final third = selectCreateOneTimeThird(state);
+  final fourth = selectCreateOneTimeFourth(state);
+  final message = selectCreateOneTimeMessage(state);
+
+  return first != null &&
+      second != null &&
+      third != null &&
+      fourth != null &&
+      message != null;
+}

@@ -5,6 +5,7 @@ import 'package:localization/generated/l10n.dart';
 import '../buttons/rounded_outlined_button.dart';
 import '../generated/colors.gen.dart';
 import '../models/enum/icon_type.dart';
+import '../models/formatted_date.dart';
 import '../rows/card_header.dart';
 import '../rows/card_message.dart';
 
@@ -15,7 +16,7 @@ class NotificationCardVm extends Equatable {
     required this.iconType,
   });
 
-  final TimeOfDay? time;
+  final FormattedDate? time;
   final String message;
   final IconType? iconType;
 
@@ -48,16 +49,12 @@ class NotificationCard extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(bottom: 8),
-                child: CardHeader(
-                  icon: vm.iconType,
-                ),
+                child: CardHeader(icon: vm.iconType),
               ),
               if (vm.iconType != null)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 8),
-                  child: CardHeader(
-                    time: vm.time,
-                  ),
+                  child: CardHeader(time: vm.time),
                 ),
               CardMessage(message: vm.message),
               const SizedBox(height: 16),

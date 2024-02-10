@@ -79,6 +79,7 @@ class BaseTextInputState extends State<BaseTextInput> {
 
   void _controllerChangeListener() {
     final text = _controller.text;
+
     final skip = widget.vm.value == null && text.isEmpty;
     if (widget.vm.value != text && !skip) {
       widget.vm.onChangedSync(text);

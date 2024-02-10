@@ -14,35 +14,15 @@ enum IconType {
 
     switch (this) {
       case IconType.business:
-        return const Icon(
-          Icons.business_center_outlined,
-          color: color,
-          size: 40,
-        );
+        return const Icon(Icons.business_center_outlined, color: color);
       case IconType.list:
-        return const Icon(
-          Icons.list_alt_outlined,
-          color: color,
-          size: 40,
-        );
+        return const Icon(Icons.list_alt_outlined, color: color);
       case IconType.personCheck:
-        return const Icon(
-          Icons.person_add_alt_outlined,
-          color: color,
-          size: 40,
-        );
+        return const Icon(Icons.person_add_alt_outlined, color: color);
       case IconType.notification:
-        return const Icon(
-          Icons.notifications_active_outlined,
-          color: color,
-          size: 40,
-        );
+        return const Icon(Icons.notifications_active_outlined, color: color);
       case IconType.error:
-        return const Icon(
-          Icons.error_outline_rounded,
-          color: color,
-          size: 40,
-        );
+        return const Icon(Icons.error_outline_rounded, color: color);
     }
   }
 }

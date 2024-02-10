@@ -1,9 +1,10 @@
 import 'package:async_redux/async_redux.dart';
+import 'package:intl/intl.dart';
 
 import '../../../service_locator.dart';
 import '../../app_state.dart';
 import '../../one_time_notifications/actions/add_one_time_notifications_action.dart';
-import '../../one_time_notifications/models/one_time_notifications_state.dart';
+import '../../one_time_notifications/models/notifications_state.dart';
 import '../../services/isar/src/models/notification_data.dart';
 import '../create_one_time_notification_selectors.dart';
 import '../models/create_one_time_state.dart';
@@ -25,7 +26,17 @@ class CreateOneTimeAction extends ReduxAction<AppState> {
     final icon = selectCreateOneTimeIcon(state);
     final color = selectCreateOneTimeColor(state);
 
-    final time = DateTime.parse('$first$second:$third$fourth');
+    final stringTime = '$first$second:$third$fourth';
+
+    final now = DateTime.now();
+    final formattedTime = DateFormat.Hm().parse(stringTime);
+    final time = DateTime(
+      now.year,
+      now.month,
+      now.day,
+      formattedTime.hour,
+      formattedTime.minute,
+    );
 
     final data = NotificationData()
       ..message = message
@@ -41,7 +52,7 @@ class CreateOneTimeAction extends ReduxAction<AppState> {
 
     final result = await getIsar.writeTxn(data: data);
 
-    final notification = OneTimeNotification(
+    final notification = Notification(
       id: result,
       message: message,
       time: time,

@@ -32,4 +32,10 @@ class IsarService {
 
     return result;
   }
+
+  Future<List<NotificationData>> getAll() async {
+    final result = await _db.notificationDatas.where().findAll();
+
+    return result;
+  }
 }

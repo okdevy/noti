@@ -4,6 +4,7 @@ import 'package:business/redux/one_time_notifications/one_time_notifications_sel
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:ui/cards/notification_card.dart';
+import 'package:ui/models/formatted_date.dart';
 import 'package:ui/views/one_time_view.dart';
 
 import '../mappers/icon_type_mapper.dart';
@@ -37,7 +38,7 @@ class _Factory extends VmFactory<AppState, OneTimeViewConnector, _Vm> {
         items: notifications.values
             .map(
               (notification) => NotificationCardVm(
-                time: T,
+                time: FormattedDate.hours(notification.time),
                 message: notification.message,
                 iconType: notification.icon.asUI,
               ),
