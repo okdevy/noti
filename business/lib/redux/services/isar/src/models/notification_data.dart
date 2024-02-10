@@ -15,10 +15,10 @@ class NotificationData {
   DateTime? time;
 
   @enumerated
-  IconTypeEnum icon = IconTypeEnum.business;
+  IconTypeEnum icon = IconTypeEnum.none;
 
   @enumerated
-  ColorTypeEnum color = ColorTypeEnum.lemonYellow;
+  ColorTypeEnum color = ColorTypeEnum.none;
 
   @enumerated
   NotificationTypeEnum type = NotificationTypeEnum.oneTime;

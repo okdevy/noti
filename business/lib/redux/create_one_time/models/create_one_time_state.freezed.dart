@@ -21,8 +21,8 @@ mixin _$CreateOneTimeState {
   String? get third => throw _privateConstructorUsedError;
   String? get fourth => throw _privateConstructorUsedError;
   String? get message => throw _privateConstructorUsedError;
-  int? get iconIndex => throw _privateConstructorUsedError;
-  int? get colorIndex => throw _privateConstructorUsedError;
+  IconTypeEnum? get icon => throw _privateConstructorUsedError;
+  ColorTypeEnum? get color => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CreateOneTimeStateCopyWith<CreateOneTimeState> get copyWith =>
@@ -41,8 +41,8 @@ abstract class $CreateOneTimeStateCopyWith<$Res> {
       String? third,
       String? fourth,
       String? message,
-      int? iconIndex,
-      int? colorIndex});
+      IconTypeEnum? icon,
+      ColorTypeEnum? color});
 }
 
 /// @nodoc
@@ -63,8 +63,8 @@ class _$CreateOneTimeStateCopyWithImpl<$Res, $Val extends CreateOneTimeState>
     Object? third = freezed,
     Object? fourth = freezed,
     Object? message = freezed,
-    Object? iconIndex = freezed,
-    Object? colorIndex = freezed,
+    Object? icon = freezed,
+    Object? color = freezed,
   }) {
     return _then(_value.copyWith(
       first: freezed == first
@@ -87,14 +87,14 @@ class _$CreateOneTimeStateCopyWithImpl<$Res, $Val extends CreateOneTimeState>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconIndex: freezed == iconIndex
-          ? _value.iconIndex
-          : iconIndex // ignore: cast_nullable_to_non_nullable
-              as int?,
-      colorIndex: freezed == colorIndex
-          ? _value.colorIndex
-          : colorIndex // ignore: cast_nullable_to_non_nullable
-              as int?,
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as IconTypeEnum?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as ColorTypeEnum?,
     ) as $Val);
   }
 }
@@ -113,8 +113,8 @@ abstract class _$$CreateOneTimeStateImplCopyWith<$Res>
       String? third,
       String? fourth,
       String? message,
-      int? iconIndex,
-      int? colorIndex});
+      IconTypeEnum? icon,
+      ColorTypeEnum? color});
 }
 
 /// @nodoc
@@ -133,8 +133,8 @@ class __$$CreateOneTimeStateImplCopyWithImpl<$Res>
     Object? third = freezed,
     Object? fourth = freezed,
     Object? message = freezed,
-    Object? iconIndex = freezed,
-    Object? colorIndex = freezed,
+    Object? icon = freezed,
+    Object? color = freezed,
   }) {
     return _then(_$CreateOneTimeStateImpl(
       first: freezed == first
@@ -157,14 +157,14 @@ class __$$CreateOneTimeStateImplCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
-      iconIndex: freezed == iconIndex
-          ? _value.iconIndex
-          : iconIndex // ignore: cast_nullable_to_non_nullable
-              as int?,
-      colorIndex: freezed == colorIndex
-          ? _value.colorIndex
-          : colorIndex // ignore: cast_nullable_to_non_nullable
-              as int?,
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as IconTypeEnum?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as ColorTypeEnum?,
     ));
   }
 }
@@ -178,8 +178,8 @@ class _$CreateOneTimeStateImpl implements _CreateOneTimeState {
       this.third,
       this.fourth,
       this.message,
-      this.iconIndex,
-      this.colorIndex});
+      this.icon,
+      this.color});
 
   @override
   final String? first;
@@ -192,13 +192,13 @@ class _$CreateOneTimeStateImpl implements _CreateOneTimeState {
   @override
   final String? message;
   @override
-  final int? iconIndex;
+  final IconTypeEnum? icon;
   @override
-  final int? colorIndex;
+  final ColorTypeEnum? color;
 
   @override
   String toString() {
-    return 'CreateOneTimeState(first: $first, second: $second, third: $third, fourth: $fourth, message: $message, iconIndex: $iconIndex, colorIndex: $colorIndex)';
+    return 'CreateOneTimeState(first: $first, second: $second, third: $third, fourth: $fourth, message: $message, icon: $icon, color: $color)';
   }
 
   @override
@@ -211,15 +211,13 @@ class _$CreateOneTimeStateImpl implements _CreateOneTimeState {
             (identical(other.third, third) || other.third == third) &&
             (identical(other.fourth, fourth) || other.fourth == fourth) &&
             (identical(other.message, message) || other.message == message) &&
-            (identical(other.iconIndex, iconIndex) ||
-                other.iconIndex == iconIndex) &&
-            (identical(other.colorIndex, colorIndex) ||
-                other.colorIndex == colorIndex));
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.color, color) || other.color == color));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, first, second, third, fourth,
-      message, iconIndex, colorIndex);
+  int get hashCode => Object.hash(
+      runtimeType, first, second, third, fourth, message, icon, color);
 
   @JsonKey(ignore: true)
   @override
@@ -236,8 +234,8 @@ abstract class _CreateOneTimeState implements CreateOneTimeState {
       final String? third,
       final String? fourth,
       final String? message,
-      final int? iconIndex,
-      final int? colorIndex}) = _$CreateOneTimeStateImpl;
+      final IconTypeEnum? icon,
+      final ColorTypeEnum? color}) = _$CreateOneTimeStateImpl;
 
   @override
   String? get first;
@@ -250,9 +248,9 @@ abstract class _CreateOneTimeState implements CreateOneTimeState {
   @override
   String? get message;
   @override
-  int? get iconIndex;
+  IconTypeEnum? get icon;
   @override
-  int? get colorIndex;
+  ColorTypeEnum? get color;
   @override
   @JsonKey(ignore: true)
   _$$CreateOneTimeStateImplCopyWith<_$CreateOneTimeStateImpl> get copyWith =>

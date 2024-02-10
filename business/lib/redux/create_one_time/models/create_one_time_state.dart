@@ -1,4 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:models/enum/color_type.dart';
+import 'package:models/enum/icon_type.dart';
 
 part 'create_one_time_state.freezed.dart';
 
@@ -10,8 +12,8 @@ class CreateOneTimeState with _$CreateOneTimeState {
     String? third,
     String? fourth,
     String? message,
-    int? iconIndex,
-    int? colorIndex,
+    IconTypeEnum? icon,
+    ColorTypeEnum? color,
   }) = _CreateOneTimeState;
 }
 

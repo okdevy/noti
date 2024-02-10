@@ -15,6 +15,9 @@ import 'package:ui/models/enum/icon_type.dart';
 import 'package:ui/models/value_changed.dart';
 import 'package:ui/pages/create_notification_page.dart';
 
+import '../mappers/color_type_mapper.dart';
+import '../mappers/icon_type_mapper.dart';
+
 class CreateOneTimeNotificationPageConnector extends StatelessWidget {
   const CreateOneTimeNotificationPageConnector({
     super.key,
@@ -49,8 +52,8 @@ class _Factory
     final third = selectCreateOneTimeThird(state);
     final fourth = selectCreateOneTimeFourth(state);
     final message = selectCreateOneTimeMessage(state);
-    final iconIndex = selectCreateOneTimeIconIndex(state);
-    final colorIndex = selectCreateOneTimeColorIndex(state);
+    final icon = selectCreateOneTimeIcon(state);
+    final color = selectCreateOneTimeColor(state);
 
     return _Vm(
       message: ValueChangedWithErrorVm<String?>(
@@ -74,14 +77,13 @@ class _Factory
         onChanged: (value) => dispatchSync(SetFourthAction(value!)),
       ),
       icon: ValueChangedVm(
-        value: iconIndex != null ? IconType.values[iconIndex] : null,
-        onChanged: (value) =>
-            dispatchSync(SetIconAction(iconIndex: value?.index)),
+        value: icon.asUI,
+        onChanged: (value) => dispatchSync(SetIconAction(icon: value.asModel)),
       ),
       color: ValueChangedVm(
-        value: colorIndex != null ? ColorType.values[colorIndex] : null,
+        value: color?.asUI,
         onChanged: (value) =>
-            dispatchSync(SetColorAction(colorIndex: value?.index)),
+            dispatchSync(SetColorAction(color: value.asModel)),
       ),
       onPressedConfirm: () => dispatchSync(CreateOneTimeAction()),
     );

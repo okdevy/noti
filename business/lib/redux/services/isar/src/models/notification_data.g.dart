@@ -111,10 +111,10 @@ NotificationData _notificationDataDeserialize(
   final object = NotificationData();
   object.color =
       _NotificationDatacolorValueEnumMap[reader.readByteOrNull(offsets[0])] ??
-          ColorTypeEnum.noneBackground;
+          ColorTypeEnum.none;
   object.icon =
       _NotificationDataiconValueEnumMap[reader.readByteOrNull(offsets[1])] ??
-          IconTypeEnum.business;
+          IconTypeEnum.none;
   object.id = id;
   object.message = reader.readStringOrNull(offsets[2]);
   object.time = reader.readDateTimeOrNull(offsets[3]);
@@ -134,11 +134,11 @@ P _notificationDataDeserializeProp<P>(
     case 0:
       return (_NotificationDatacolorValueEnumMap[
               reader.readByteOrNull(offset)] ??
-          ColorTypeEnum.noneBackground) as P;
+          ColorTypeEnum.none) as P;
     case 1:
       return (_NotificationDataiconValueEnumMap[
               reader.readByteOrNull(offset)] ??
-          IconTypeEnum.business) as P;
+          IconTypeEnum.none) as P;
     case 2:
       return (reader.readStringOrNull(offset)) as P;
     case 3:
@@ -153,32 +153,36 @@ P _notificationDataDeserializeProp<P>(
 }
 
 const _NotificationDatacolorEnumValueMap = {
-  'noneBackground': 0,
-  'peachRed': 1,
-  'lemonYellow': 2,
-  'lightPurple': 3,
-  'lightPink': 4,
+  'none': 0,
+  'noneBackground': 1,
+  'peachRed': 2,
+  'lemonYellow': 3,
+  'lightPurple': 4,
+  'lightPink': 5,
 };
 const _NotificationDatacolorValueEnumMap = {
-  0: ColorTypeEnum.noneBackground,
-  1: ColorTypeEnum.peachRed,
-  2: ColorTypeEnum.lemonYellow,
-  3: ColorTypeEnum.lightPurple,
-  4: ColorTypeEnum.lightPink,
+  0: ColorTypeEnum.none,
+  1: ColorTypeEnum.noneBackground,
+  2: ColorTypeEnum.peachRed,
+  3: ColorTypeEnum.lemonYellow,
+  4: ColorTypeEnum.lightPurple,
+  5: ColorTypeEnum.lightPink,
 };
 const _NotificationDataiconEnumValueMap = {
-  'business': 0,
-  'list': 1,
-  'personCheck': 2,
-  'notification': 3,
-  'error': 4,
+  'none': 0,
+  'business': 1,
+  'list': 2,
+  'personCheck': 3,
+  'notification': 4,
+  'error': 5,
 };
 const _NotificationDataiconValueEnumMap = {
-  0: IconTypeEnum.business,
-  1: IconTypeEnum.list,
-  2: IconTypeEnum.personCheck,
-  3: IconTypeEnum.notification,
-  4: IconTypeEnum.error,
+  0: IconTypeEnum.none,
+  1: IconTypeEnum.business,
+  2: IconTypeEnum.list,
+  3: IconTypeEnum.personCheck,
+  4: IconTypeEnum.notification,
+  5: IconTypeEnum.error,
 };
 const _NotificationDatatypeEnumValueMap = {
   'oneTime': 0,

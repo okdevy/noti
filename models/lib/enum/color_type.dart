@@ -1,4 +1,5 @@
 enum ColorTypeEnum {
+  none,
   noneBackground,
   peachRed,
   lemonYellow,

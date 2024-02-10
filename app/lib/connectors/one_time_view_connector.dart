@@ -37,11 +37,9 @@ class _Factory extends VmFactory<AppState, OneTimeViewConnector, _Vm> {
         items: notifications.values
             .map(
               (notification) => NotificationCardVm(
-                time: notification.time != null
-                    ? TimeOfDay.fromDateTime(notification.time!)
-                    : null,
+                time: T,
                 message: notification.message,
-                iconType: notification.icon?.asUI,
+                iconType: notification.icon.asUI,
               ),
             )
             .toList(growable: false),

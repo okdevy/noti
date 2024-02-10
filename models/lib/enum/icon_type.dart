@@ -1,4 +1,5 @@
 enum IconTypeEnum {
+  none,
   business,
   list,
   personCheck,

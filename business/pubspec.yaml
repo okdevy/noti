@@ -20,14 +20,19 @@ dependencies:
   http_client:
     path: ../http_client
   intl: ^0.18.1
-  logging: ^1.2.0
+  isar: ^3.1.0+1
+  isar_flutter_libs: ^3.1.0+1
   models:
     path: ../models
+  path_provider: ^2.1.2
+  pro_pretty_logging: ^1.0.5
   storage:
     path: ../storage
+  uuid: ^4.3.2
 
 dev_dependencies:
   build_runner: ^2.4.7
   freezed: ^2.4.6
+  isar_generator: ^3.1.0
   json_serializable: ^6.7.1
   pro_lints: ^2.0.2

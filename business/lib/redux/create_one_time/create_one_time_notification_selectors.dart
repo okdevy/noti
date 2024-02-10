@@ -1,3 +1,6 @@
+import 'package:models/enum/color_type.dart';
+import 'package:models/enum/icon_type.dart';
+
 import '../app_state.dart';
 
 /// Returns [String?] value
@@ -16,10 +19,10 @@ String? selectCreateOneTimeFourth(AppState state) => state.createOneTime.fourth;
 String? selectCreateOneTimeMessage(AppState state) =>
     state.createOneTime.message;
 
-/// Returns [int?] icon index
-int? selectCreateOneTimeIconIndex(AppState state) =>
-    state.createOneTime.iconIndex;
+/// Returns [IconTypeEnum?] icon type
+IconTypeEnum? selectCreateOneTimeIcon(AppState state) =>
+    state.createOneTime.icon;
 
-/// Returns [int?] color index
-int? selectCreateOneTimeColorIndex(AppState state) =>
-    state.createOneTime.colorIndex;
+/// Returns [ColorTypeEnum?] color type
+ColorTypeEnum? selectCreateOneTimeColor(AppState state) =>
+    state.createOneTime.color;

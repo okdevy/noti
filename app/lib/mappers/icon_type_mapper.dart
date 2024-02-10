@@ -1,10 +1,11 @@
 import 'package:models/enum/icon_type.dart';
 import 'package:ui/models/enum/icon_type.dart';
 
-extension IconTypeEnumExt on IconType {
-  IconTypeEnum get asModel => IconTypeEnum.values[index];
+extension IconTypeExt on IconType? {
+  IconTypeEnum? get asModel =>
+      this != null ? IconTypeEnum.values[this!.index] : null;
 }
 
-extension IconTypeExt on IconTypeEnum? {
+extension IconTypeEnumExt on IconTypeEnum? {
   IconType? get asUI => this != null ? IconType.values[this!.index] : null;
 }

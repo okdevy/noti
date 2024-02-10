@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:logging/logging.dart';
+import 'package:pro_pretty_logging/pro_pretty_logging.dart';
 
 abstract class ServiceInterface {
   ServiceInterface() {
