@@ -43,5 +43,8 @@
     "doYouWantToDiscardUnsavedChanges": "Ви хочете видалити незбережені зміни?",
     "no": "Ні",
     "yes": "Так",
-    "notificationDeleted": "Нотифікація видалена"
+    "notificationDeleted": "Нотифікація видалена",
+    "oneMinute": "1 хвилина",
+    "twoMinutes": "2 хвилини",
+    "threeMinutes": "3 хвилини"
 }

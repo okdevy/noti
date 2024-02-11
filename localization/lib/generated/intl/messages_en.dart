@@ -63,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Notification deleted"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "oneMinute": MessageLookupByLibrary.simpleMessage("1 minute"),
         "oneTime": MessageLookupByLibrary.simpleMessage("One-time"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordsDoNotMatch":
@@ -83,8 +84,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "The time is wrong. Try again."),
         "thisFieldIsRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
+        "threeMinutes": MessageLookupByLibrary.simpleMessage("3 minutes"),
         "time": MessageLookupByLibrary.simpleMessage("Time: "),
         "title": MessageLookupByLibrary.simpleMessage("title"),
+        "twoMinutes": MessageLookupByLibrary.simpleMessage("2 minutes"),
         "typeTime": MessageLookupByLibrary.simpleMessage("Type time"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };

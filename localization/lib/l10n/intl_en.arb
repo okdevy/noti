@@ -43,5 +43,8 @@
     "doYouWantToDiscardUnsavedChanges": "Do you want to discard unsaved changes?",
     "no": "No",
     "yes": "Yes",
-    "notificationDeleted": "Notification deleted"
+    "notificationDeleted": "Notification deleted",
+    "oneMinute": "1 minute",
+    "twoMinutes": "2 minutes",
+    "threeMinutes": "3 minutes"
 }

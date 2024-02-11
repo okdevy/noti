@@ -499,6 +499,36 @@ class S {
       args: [],
     );
   }
+
+  /// `1 minute`
+  String get oneMinute {
+    return Intl.message(
+      '1 minute',
+      name: 'oneMinute',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2 minutes`
+  String get twoMinutes {
+    return Intl.message(
+      '2 minutes',
+      name: 'twoMinutes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `3 minutes`
+  String get threeMinutes {
+    return Intl.message(
+      '3 minutes',
+      name: 'threeMinutes',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

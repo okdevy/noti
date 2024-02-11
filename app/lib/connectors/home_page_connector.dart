@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:ui/pages/home_page.dart';
 
 import 'one_time_view_connector.dart';
+import 'recurring_view_connector.dart';
 
 class HomePageConnector extends StatelessWidget {
   const HomePageConnector({
@@ -21,9 +22,7 @@ class HomePageConnector extends StatelessWidget {
         builder: (context, vm) => HomePage(
           isWaiting: vm.isWaiting,
           oneTime: const OneTimeViewConnector(),
-          recurring: Container(
-            color: Colors.blue,
-          ),
+          recurring: const RecurringViewConnector(),
         ),
       );
 }

@@ -63,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Нотифікація видалена"),
         "notifications": MessageLookupByLibrary.simpleMessage("Нотифікації"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "oneMinute": MessageLookupByLibrary.simpleMessage("1 хвилина"),
         "oneTime": MessageLookupByLibrary.simpleMessage("Одноразові"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordsDoNotMatch":
@@ -83,8 +84,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Час неправильний, спробуйте ще раз."),
         "thisFieldIsRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
+        "threeMinutes": MessageLookupByLibrary.simpleMessage("3 хвилини"),
         "time": MessageLookupByLibrary.simpleMessage("Час: "),
         "title": MessageLookupByLibrary.simpleMessage("Title"),
+        "twoMinutes": MessageLookupByLibrary.simpleMessage("2 хвилини"),
         "typeTime": MessageLookupByLibrary.simpleMessage("Введіть час"),
         "yes": MessageLookupByLibrary.simpleMessage("Так")
       };
