@@ -42,5 +42,6 @@
     "areYouSure": "Are you sure?",
     "doYouWantToDiscardUnsavedChanges": "Ви хочете видалити незбережені зміни?",
     "no": "Ні",
-    "yes": "Так"
+    "yes": "Так",
+    "notificationDeleted": "Нотифікація видалена"
 }

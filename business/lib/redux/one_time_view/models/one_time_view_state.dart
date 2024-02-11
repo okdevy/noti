@@ -9,3 +9,7 @@ class OneTimeViewState with _$OneTimeViewState {
     @Default(IListConst<int>([])) IList<int> view,
   }) = _OneTimeViewState;
 }
+
+enum OneTimeViewIsWaiting {
+  wait,
+}

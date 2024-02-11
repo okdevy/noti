@@ -489,6 +489,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Notification deleted`
+  String get notificationDeleted {
+    return Intl.message(
+      'Notification deleted',
+      name: 'notificationDeleted',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

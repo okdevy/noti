@@ -42,5 +42,6 @@
     "areYouSure": "Are you sure?",
     "doYouWantToDiscardUnsavedChanges": "Do you want to discard unsaved changes?",
     "no": "No",
-    "yes": "Yes"
+    "yes": "Yes",
+    "notificationDeleted": "Notification deleted"
 }

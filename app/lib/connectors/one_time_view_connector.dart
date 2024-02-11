@@ -1,9 +1,11 @@
 import 'package:async_redux/async_redux.dart';
 import 'package:business/redux/app_state.dart';
 import 'package:business/redux/notifications/notifications_selectors.dart';
+import 'package:business/redux/one_time_view/actions/delete_one_time_action.dart';
 import 'package:business/redux/one_time_view/one_time_view_selectors.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:models/enum/icon_type.dart';
 import 'package:ui/cards/notification_card.dart';
 import 'package:ui/models/formatted_date.dart';
 import 'package:ui/views/one_time_view.dart';
@@ -32,10 +34,12 @@ class _Factory extends VmFactory<AppState, OneTimeViewConnector, _Vm> {
 
   @override
   _Vm fromStore() {
+    final isWaiting = selectOneTimeViewIsWaiting(state);
     final view = selectOneTimeView(state).reversed;
 
     return _Vm(
       oneTimeView: OneTimeViewVm(
+        isWaiting: isWaiting,
         items: view.map(
           (id) {
             final notification = selectNotificationsById(state, id: id);
@@ -43,7 +47,11 @@ class _Factory extends VmFactory<AppState, OneTimeViewConnector, _Vm> {
             return NotificationCardVm(
               time: FormattedDate.hours(notification.time),
               message: notification.message,
-              iconType: notification.icon.asUI,
+              iconType: notification.icon == IconTypeEnum.none
+                  ? null
+                  : notification.icon.asUI,
+              onPressedDelete: () async =>
+                  dispatchAsync(DeleteOneTimeAction(notificationId: id)),
             );
           },
         ).toList(growable: false),

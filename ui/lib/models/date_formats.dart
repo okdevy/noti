@@ -5,5 +5,5 @@ String toHours(DateTime? dt) {
     return '';
   }
 
-  return DateFormat.jm().format(dt);
+  return DateFormat.Hm().format(dt);
 }

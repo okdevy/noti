@@ -123,7 +123,7 @@ class _Vm extends Vm with EquatableMixin {
   final ValueChangedVm<String?> forth;
   final ValueChangedVm<ColorType?> color;
   final ValueChangedVm<IconType?> icon;
-  final VoidCallback? onPressedConfirm;
+  final VoidCallbackVm? onPressedConfirm;
 
   @override
   List<Object?> get props => [

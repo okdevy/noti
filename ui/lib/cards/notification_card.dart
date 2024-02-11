@@ -6,19 +6,22 @@ import '../buttons/rounded_outlined_button.dart';
 import '../generated/colors.gen.dart';
 import '../models/enum/icon_type.dart';
 import '../models/formatted_date.dart';
-import '../rows/card_header.dart';
+import '../rows/card_icon_header.dart';
 import '../rows/card_message.dart';
+import '../rows/card_text_header.dart';
 
 class NotificationCardVm extends Equatable {
   const NotificationCardVm({
     required this.time,
     required this.message,
     required this.iconType,
+    required this.onPressedDelete,
   });
 
   final FormattedDate? time;
   final String message;
   final IconType? iconType;
+  final VoidCallback onPressedDelete;
 
   @override
   List<Object?> get props => [time, message, iconType];
@@ -47,14 +50,23 @@ class NotificationCard extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8),
-                child: CardHeader(icon: vm.iconType),
-              ),
-              if (vm.iconType != null)
+              if (vm.iconType != null) ...[
+                CardIconHeader(
+                  icon: vm.iconType,
+                  onPressedDelete: vm.onPressedDelete,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8, top: 8),
+                  child: CardTextHeader(time: vm.time),
+                ),
+              ],
+              if (vm.iconType == null)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 8),
-                  child: CardHeader(time: vm.time),
+                  child: CardTextHeader(
+                    time: vm.time,
+                    onPressedDelete: vm.onPressedDelete,
+                  ),
                 ),
               CardMessage(message: vm.message),
               const SizedBox(height: 16),

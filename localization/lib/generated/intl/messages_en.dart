@@ -59,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "mustContainAtLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one uppercase"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
+        "notificationDeleted":
+            MessageLookupByLibrary.simpleMessage("Notification deleted"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "oneTime": MessageLookupByLibrary.simpleMessage("One-time"),

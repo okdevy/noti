@@ -14,19 +14,13 @@ abstract class IsarServiceDriverInterface {
 class IsarService extends DisposableServiceInterface {
   IsarService({
     required Isar db,
-    // required IsarServiceDriverInterface driver,
   }) : _db = db;
-  // _driver = driver;
 
   late final Isar _db;
-  // late final IsarServiceDriverInterface _driver;
-  StreamSubscription<void>? _notificationsWatcher;
 
   @override
   Future<void> dispose() async {
     super.dispose();
-    await _notificationsWatcher?.cancel();
-    _notificationsWatcher = null;
     await _db.close();
   }
 
@@ -55,5 +49,13 @@ class IsarService extends DisposableServiceInterface {
     final result = await _db.notificationDatas.where().findAll();
 
     return result;
+  }
+
+  Future<void> delete({required int id}) async {
+    await _db.writeTxn(() async {
+      final result = await _db.notificationDatas.delete(id);
+
+      return result;
+    });
   }
 }

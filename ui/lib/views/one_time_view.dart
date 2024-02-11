@@ -4,18 +4,21 @@ import 'package:localization/generated/l10n.dart';
 
 import '../buttons/rounded_button.dart';
 import '../cards/notification_card.dart';
+import '../indicators/base_circle_indicator.dart';
 
 class OneTimeViewVm extends Equatable {
   const OneTimeViewVm({
+    required this.isWaiting,
     required this.items,
     required this.onPressedAdd,
   });
 
+  final bool isWaiting;
   final List<NotificationCardVm> items;
   final VoidCallback onPressedAdd;
 
   @override
-  List<Object?> get props => [items, onPressedAdd];
+  List<Object?> get props => [isWaiting, items, onPressedAdd];
 }
 
 class OneTimeView extends StatelessWidget {
@@ -25,24 +28,24 @@ class OneTimeView extends StatelessWidget {
   });
 
   final OneTimeViewVm oneTimeView;
+
   @override
-  Widget build(BuildContext context) => ListView(
-        padding: const EdgeInsets.all(16),
+  Widget build(BuildContext context) => Stack(
         children: [
-          ...oneTimeView.items.map(
-            (e) => NotificationCard(
-              vm: NotificationCardVm(
-                time: e.time,
-                message: e.message,
-                iconType: e.iconType,
+          ListView(
+            padding: const EdgeInsets.all(16),
+            children: [
+              ...oneTimeView.items.map(
+                (vm) => NotificationCard(vm: vm),
               ),
-            ),
+              RoundedButton(
+                title: S.current.addNewNotification,
+                onPressed: oneTimeView.onPressedAdd,
+                icon: const Icon(Icons.add_circle),
+              ),
+            ],
           ),
-          RoundedButton(
-            title: S.current.addNewNotification,
-            onPressed: oneTimeView.onPressedAdd,
-            icon: const Icon(Icons.add_circle),
-          ),
+          if (oneTimeView.isWaiting) const BaseCircleIndicator(),
         ],
       );
 }

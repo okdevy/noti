@@ -6,9 +6,11 @@ import '../generated/colors.gen.dart';
 class CardMessage extends StatelessWidget {
   const CardMessage({
     required this.message,
+    this.label,
     super.key,
   });
 
+  final String? label;
   final String message;
 
   @override
@@ -19,7 +21,7 @@ class CardMessage extends StatelessWidget {
           Expanded(
             child: RichText(
               text: TextSpan(
-                text: S.current.messageColon,
+                text: label ?? S.current.messageColon,
                 style: const TextStyle(
                   color: ColorName.subtitle,
                   fontSize: 14,

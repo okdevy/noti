@@ -13,7 +13,7 @@ class TextAreaInput extends BaseTextInput {
   }) : super(
           keyboardType: TextInputType.multiline,
           filled: true,
-          maxLines: null,
+          maxLines: 4,
           alignLabelWithHint: true,
           floatingLabelBehavior: FloatingLabelBehavior.never,
           textInputAction: TextInputAction.done,

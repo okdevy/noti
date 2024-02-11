@@ -13,10 +13,6 @@ class NotificationsState with _$NotificationsState {
   }) = _NotificationsState;
 }
 
-enum NotificationsWaiting {
-  wait,
-}
-
 @freezed
 class Notification with _$Notification {
   const factory Notification({
