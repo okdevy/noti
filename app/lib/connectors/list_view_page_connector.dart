@@ -7,29 +7,37 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:models/enum/icon_type.dart';
 import 'package:ui/cards/notification_card.dart';
+import 'package:ui/models/enum/recurring_view_type.dart';
 import 'package:ui/models/formatted_date.dart';
+import 'package:ui/pages/list_view_page.dart';
 import 'package:ui/views/one_time_view.dart';
 
 import '../mappers/icon_type_mapper.dart';
 import '../navigation/routes.dart';
+import 'one_time_view_connector.dart';
 
-class ListViewConnector extends StatelessWidget {
-  const ListViewConnector({
+class ListViewPageConnector extends StatelessWidget {
+  const ListViewPageConnector({
+    required this.pageType,
     super.key,
   });
+
+  final RecurringType pageType;
 
   @override
   Widget build(BuildContext context) => StoreConnector<AppState, _Vm>(
         debug: this,
         vm: () => _Factory(this),
-        builder: (context, vm) => OneTimeView(
-          oneTimeView: vm.oneTimeView,
+        builder: (context, vm) => ListViewPage(
+          title: pageType.label,
+          // oneTimeView: vm.oneTimeView,
+          child: const OneTimeViewConnector(),
         ),
       );
 }
 
 /// Factory that creates a view-model for the StoreConnector.
-class _Factory extends VmFactory<AppState, ListViewConnector, _Vm> {
+class _Factory extends VmFactory<AppState, ListViewPageConnector, _Vm> {
   _Factory(super._connector);
 
   @override
@@ -52,6 +60,8 @@ class _Factory extends VmFactory<AppState, ListViewConnector, _Vm> {
                   : notification.icon.asUI,
               onPressedDelete: () async =>
                   dispatchAsync(DeleteOneTimeAction(notificationId: id)),
+              onPressedTrigger1: () {},
+              onPressedTrigger2: () {},
             );
           },
         ).toList(growable: false),

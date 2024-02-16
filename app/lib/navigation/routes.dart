@@ -6,10 +6,12 @@ import 'package:ui/pages/splash_page.dart';
 import '../connectors/create_one_time_notification_page_connector.dart';
 import '../connectors/forgot_password_page_connector.dart';
 import '../connectors/home_page_connector.dart';
+import '../connectors/list_view_page_connector.dart';
 import '../connectors/log_in_with_time_page_connector.dart';
 import '../connectors/registration_page_connector.dart';
 import '../connectors/reset_password_page_connector.dart';
 import '../dialogs/exception_dialog.dart';
+import 'route_params.dart';
 import 'routers_flow.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
@@ -22,6 +24,7 @@ class Routes {
   static const registration = 'registration';
   static const forgotPassword = 'forgotPassword';
   static const createOneTimeNotification = 'create-one-time-notification';
+  static const listPage = 'list-page';
 }
 
 GoRouter get router => RoutersMap.instance._currentRouter;
@@ -87,6 +90,23 @@ class RoutersMap {
                     child: CreateOneTimeNotificationPageConnector(),
                   ),
                 ),
+              ),
+              GoRoute(
+                name: Routes.listPage,
+                path: 'list-page/:pageType',
+                pageBuilder: (context, state) {
+                  final params = ListViewRouteParams.withState(state);
+
+                  return MaterialPage<void>(
+                    key: state.pageKey,
+                    fullscreenDialog: true,
+                    child: ExceptionDialog<AppState>(
+                      child: ListViewPageConnector(
+                        pageType: params.pageType,
+                      ),
+                    ),
+                  );
+                },
               ),
             ],
           ),

@@ -52,6 +52,8 @@ class _Factory extends VmFactory<AppState, OneTimeViewConnector, _Vm> {
                   : notification.icon.asUI,
               onPressedDelete: () async =>
                   dispatchAsync(DeleteOneTimeAction(notificationId: id)),
+              onPressedTrigger1: () {},
+              onPressedTrigger2: () {},
             );
           },
         ).toList(growable: false),

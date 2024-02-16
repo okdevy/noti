@@ -16,12 +16,16 @@ class NotificationCardVm extends Equatable {
     required this.message,
     required this.iconType,
     required this.onPressedDelete,
+    required this.onPressedTrigger1,
+    required this.onPressedTrigger2,
   });
 
   final FormattedDate? time;
   final String message;
   final IconType? iconType;
   final VoidCallback onPressedDelete;
+  final VoidCallback onPressedTrigger1;
+  final VoidCallback onPressedTrigger2;
 
   @override
   List<Object?> get props => [time, message, iconType];
@@ -76,7 +80,7 @@ class NotificationCard extends StatelessWidget {
                   Flexible(
                     child: RoundedOutlinedButton(
                       title: S.current.selectTrigger1,
-                      onPressed: () {},
+                      onPressed: vm.onPressedTrigger1,
                       width: double.infinity,
                     ),
                   ),
@@ -84,7 +88,7 @@ class NotificationCard extends StatelessWidget {
                   Flexible(
                     child: RoundedOutlinedButton(
                       title: S.current.selectTrigger2,
-                      onPressed: () {},
+                      onPressed: vm.onPressedTrigger1,
                       width: double.infinity,
                     ),
                   ),
