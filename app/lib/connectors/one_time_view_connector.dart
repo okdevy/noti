@@ -7,10 +7,12 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:models/enum/icon_type.dart';
 import 'package:ui/cards/notification_card.dart';
+import 'package:ui/models/enum/trigger_type.dart';
 import 'package:ui/models/formatted_date.dart';
 import 'package:ui/views/one_time_view.dart';
 
 import '../mappers/icon_type_mapper.dart';
+import '../navigation/route_params.dart';
 import '../navigation/routes.dart';
 
 class OneTimeViewConnector extends StatelessWidget {
@@ -52,8 +54,18 @@ class _Factory extends VmFactory<AppState, OneTimeViewConnector, _Vm> {
                   : notification.icon.asUI,
               onPressedDelete: () async =>
                   dispatchAsync(DeleteOneTimeAction(notificationId: id)),
-              onPressedTrigger1: () {},
-              onPressedTrigger2: () {},
+              onPressedTrigger1: () async => router.pushNamed(
+                Routes.selectTrigger,
+                pathParameters: const SelectTriggerRouteParams(
+                  triggerType: TriggerType.trigger1,
+                ).params,
+              ),
+              onPressedTrigger2: () async => router.pushNamed(
+                Routes.selectTrigger,
+                pathParameters: const SelectTriggerRouteParams(
+                  triggerType: TriggerType.trigger2,
+                ).params,
+              ),
             );
           },
         ).toList(growable: false),

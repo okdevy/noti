@@ -529,6 +529,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Select trigger {value}`
+  String selectTrigger(Object value) {
+    return Intl.message(
+      'Select trigger $value',
+      name: 'selectTrigger',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `All Triggers`
+  String get allTriggers {
+    return Intl.message(
+      'All Triggers',
+      name: 'allTriggers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `⏰ Alarm`
+  String get alarm {
+    return Intl.message(
+      '⏰ Alarm',
+      name: 'alarm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `🎉 Party`
+  String get party {
+    return Intl.message(
+      '🎉 Party',
+      name: 'party',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `🍜 Dinner`
+  String get dinner {
+    return Intl.message(
+      '🍜 Dinner',
+      name: 'dinner',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sport`
+  String get sport {
+    return Intl.message(
+      'Sport',
+      name: 'sport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Work`
+  String get work {
+    return Intl.message(
+      'Work',
+      name: 'work',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

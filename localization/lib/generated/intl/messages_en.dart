@@ -22,10 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(value) => "Minimum length ${value} symbols";
 
+  static String m1(value) => "Select trigger ${value}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "addNewNotification":
             MessageLookupByLibrary.simpleMessage("Add new notification"),
+        "alarm": MessageLookupByLibrary.simpleMessage("⏰ Alarm"),
+        "allTriggers": MessageLookupByLibrary.simpleMessage("All Triggers"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "backToLogIn": MessageLookupByLibrary.simpleMessage("Back to logIn"),
         "backgroundColors":
@@ -36,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "couldNotConnectToInternet": MessageLookupByLibrary.simpleMessage(
             "Couldn\'t connect to internet."),
+        "dinner": MessageLookupByLibrary.simpleMessage("🍜 Dinner"),
         "doYouWantToDiscardUnsavedChanges":
             MessageLookupByLibrary.simpleMessage(
                 "Do you want to discard unsaved changes?"),
@@ -65,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "oneMinute": MessageLookupByLibrary.simpleMessage("1 minute"),
         "oneTime": MessageLookupByLibrary.simpleMessage("One-time"),
+        "party": MessageLookupByLibrary.simpleMessage("🎉 Party"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
@@ -76,10 +82,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
         "selectIcon": MessageLookupByLibrary.simpleMessage("Select icon"),
         "selectIcons": MessageLookupByLibrary.simpleMessage("Select icons"),
+        "selectTrigger": m1,
         "selectTrigger1":
             MessageLookupByLibrary.simpleMessage("Select trigger 1"),
         "selectTrigger2":
             MessageLookupByLibrary.simpleMessage("Select trigger 2"),
+        "sport": MessageLookupByLibrary.simpleMessage("Sport"),
         "theTimeIsWrongTryAgain": MessageLookupByLibrary.simpleMessage(
             "The time is wrong. Try again."),
         "thisFieldIsRequired":
@@ -89,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "title": MessageLookupByLibrary.simpleMessage("title"),
         "twoMinutes": MessageLookupByLibrary.simpleMessage("2 minutes"),
         "typeTime": MessageLookupByLibrary.simpleMessage("Type time"),
+        "work": MessageLookupByLibrary.simpleMessage("Work"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

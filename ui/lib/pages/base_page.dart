@@ -4,7 +4,7 @@ import '../app_bar/base_app_bar.dart';
 
 class BasePage extends StatelessWidget {
   const BasePage({
-    required this.child,
+    required this.body,
     required this.title,
     this.bottomAction,
     this.padding = EdgeInsets.zero,
@@ -12,7 +12,7 @@ class BasePage extends StatelessWidget {
   });
 
   final String title;
-  final Widget child;
+  final Widget body;
   final Widget? bottomAction;
   final EdgeInsets padding;
 
@@ -28,7 +28,7 @@ class BasePage extends StatelessWidget {
                   padding: padding,
                   keyboardDismissBehavior:
                       ScrollViewKeyboardDismissBehavior.onDrag,
-                  child: child,
+                  child: body,
                 ),
               ),
               if (bottomAction != null) bottomAction!,

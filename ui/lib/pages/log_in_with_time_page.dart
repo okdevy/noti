@@ -44,7 +44,7 @@ class LogInWithTimePage extends StatelessWidget {
             ),
           ],
         ),
-        child: Column(
+        body: Column(
           children: [
             const SizedBox(height: 72),
             Text(

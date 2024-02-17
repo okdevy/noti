@@ -22,10 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(value) => "Minimum length ${value} symbols";
 
+  static String m1(value) => "Виберіть тригер ${value}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "addNewNotification":
             MessageLookupByLibrary.simpleMessage("Додати нову нотифікацію"),
+        "alarm": MessageLookupByLibrary.simpleMessage("🚨 Будильник"),
+        "allTriggers": MessageLookupByLibrary.simpleMessage("All Triggers"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "backToLogIn": MessageLookupByLibrary.simpleMessage("Back to logIn"),
         "backgroundColors": MessageLookupByLibrary.simpleMessage("Колір фону"),
@@ -35,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "couldNotConnectToInternet": MessageLookupByLibrary.simpleMessage(
             "Couldn\'t connect to internet."),
+        "dinner": MessageLookupByLibrary.simpleMessage("🍜 Вечеря"),
         "doYouWantToDiscardUnsavedChanges":
             MessageLookupByLibrary.simpleMessage(
                 "Ви хочете видалити незбережені зміни?"),
@@ -65,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "oneMinute": MessageLookupByLibrary.simpleMessage("1 хвилина"),
         "oneTime": MessageLookupByLibrary.simpleMessage("Одноразові"),
+        "party": MessageLookupByLibrary.simpleMessage("🎉 Вечірка"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
@@ -76,10 +82,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
         "selectIcon": MessageLookupByLibrary.simpleMessage("Виберіть іконку"),
         "selectIcons": MessageLookupByLibrary.simpleMessage("Виберіть іконку"),
+        "selectTrigger": m1,
         "selectTrigger1":
             MessageLookupByLibrary.simpleMessage("Виберіть тригер 1"),
         "selectTrigger2":
             MessageLookupByLibrary.simpleMessage("Виберіть тригер 2"),
+        "sport": MessageLookupByLibrary.simpleMessage("Спорт"),
         "theTimeIsWrongTryAgain": MessageLookupByLibrary.simpleMessage(
             "Час неправильний, спробуйте ще раз."),
         "thisFieldIsRequired":
@@ -89,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "title": MessageLookupByLibrary.simpleMessage("Title"),
         "twoMinutes": MessageLookupByLibrary.simpleMessage("2 хвилини"),
         "typeTime": MessageLookupByLibrary.simpleMessage("Введіть час"),
+        "work": MessageLookupByLibrary.simpleMessage("Робота"),
         "yes": MessageLookupByLibrary.simpleMessage("Так")
       };
 }

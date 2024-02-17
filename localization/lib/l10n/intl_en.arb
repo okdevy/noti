@@ -46,5 +46,12 @@
     "notificationDeleted": "Notification deleted",
     "oneMinute": "1 minute",
     "twoMinutes": "2 minutes",
-    "threeMinutes": "3 minutes"
+    "threeMinutes": "3 minutes",
+    "selectTrigger": "Select trigger {value}",
+    "allTriggers": "All Triggers",
+    "alarm": "⏰ Alarm",
+    "party": "🎉 Party",
+    "dinner": "🍜 Dinner",
+    "sport": "Sport",
+    "work": "Work"
 }

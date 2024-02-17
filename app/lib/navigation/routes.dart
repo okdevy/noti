@@ -10,6 +10,7 @@ import '../connectors/list_view_page_connector.dart';
 import '../connectors/log_in_with_time_page_connector.dart';
 import '../connectors/registration_page_connector.dart';
 import '../connectors/reset_password_page_connector.dart';
+import '../connectors/trigger_page_connector.dart';
 import '../dialogs/exception_dialog.dart';
 import 'route_params.dart';
 import 'routers_flow.dart';
@@ -25,6 +26,7 @@ class Routes {
   static const forgotPassword = 'forgotPassword';
   static const createOneTimeNotification = 'create-one-time-notification';
   static const listPage = 'list-page';
+  static const selectTrigger = 'select-trigger';
 }
 
 GoRouter get router => RoutersMap.instance._currentRouter;
@@ -103,6 +105,23 @@ class RoutersMap {
                     child: ExceptionDialog<AppState>(
                       child: ListViewPageConnector(
                         pageType: params.pageType,
+                      ),
+                    ),
+                  );
+                },
+              ),
+              GoRoute(
+                name: Routes.selectTrigger,
+                path: 'select-trigger/:triggerType',
+                pageBuilder: (context, state) {
+                  final params = SelectTriggerRouteParams.withState(state);
+
+                  return MaterialPage<void>(
+                    key: state.pageKey,
+                    fullscreenDialog: true,
+                    child: ExceptionDialog<AppState>(
+                      child: TriggerPageConnector(
+                        triggerType: params.triggerType,
                       ),
                     ),
                   );

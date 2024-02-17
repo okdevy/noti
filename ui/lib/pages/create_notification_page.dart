@@ -111,7 +111,7 @@ class _CreateNotificationPageState extends State<CreateNotificationPage> {
               ),
             ),
           ),
-          child: Column(
+          body: Column(
             children: [
               ContainerWithTitle(
                 title: S.current.message,

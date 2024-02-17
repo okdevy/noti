@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:ui/models/enum/recurring_view_type.dart';
+import 'package:ui/models/enum/trigger_type.dart';
 
 abstract class RouteParams {
   Map<String, dynamic> get params;
@@ -29,5 +30,27 @@ class ListViewRouteParams implements RouteParams {
   @override
   Map<String, String> get params => {
         'pageType': pageType.name,
+      };
+}
+
+class SelectTriggerRouteParams implements RouteParams {
+  const SelectTriggerRouteParams({
+    required this.triggerType,
+  });
+
+  SelectTriggerRouteParams.withState(GoRouterState state)
+      : triggerType = switch (state.pathParameters['triggerType']!) {
+          'trigger1' => TriggerType.trigger1,
+          'trigger2' => TriggerType.trigger2,
+          _ => throw UnimplementedError(
+              'Unknown triggerType: ${state.pathParameters['triggerType']}',
+            ),
+        };
+
+  final TriggerType triggerType;
+
+  @override
+  Map<String, String> get params => {
+        'triggerType': triggerType.name,
       };
 }
