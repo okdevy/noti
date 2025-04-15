@@ -22,6 +22,9 @@ class ColorName {
   /// Color: #E6E6E6
   static const Color border = Color(0xFFE6E6E6);
 
+  /// Color: #F8FAFB
+  static const Color cardBackground = Color(0xFFF8FAFB);
+
   /// Color: #B9B9B9
   static const Color colon = Color(0xFFB9B9B9);
 
@@ -31,8 +34,23 @@ class ColorName {
   /// Color: #6A4DBA
   static const Color focusedBorder = Color(0xFF6A4DBA);
 
+  /// Color: #FFFEF1
+  static const Color lemonYellow = Color(0xFFFFFEF1);
+
+  /// Color: #FFF1FF
+  static const Color lightPink = Color(0xFFFFF1FF);
+
+  /// Color: #F5F1FF
+  static const Color lightPurple = Color(0xFFF5F1FF);
+
   /// Color: #F43528
   static const Color mainRed = Color(0xFFF43528);
+
+  /// Color: #F1F4FF
+  static const Color noneBackground = Color(0xFFF1F4FF);
+
+  /// Color: #FFF1F1
+  static const Color peachRed = Color(0xFFFFF1F1);
 
   /// Color: #6A4DBA
   static const Color primary = Color(0xFF6A4DBA);

@@ -1,13 +1,15 @@
 name: storage
 description: The storage package.
-publish_to: 'none'
+publish_to: "none"
 version: 1.0.0
 
 environment:
-  sdk: ^3.2.0
+  sdk: ^3.3.0
 
 dependencies:
   hive: ^2.2.3
+  models:
+    path: ../models
   path_provider: ^2.1.2
 
 dev_dependencies:

@@ -56,8 +56,6 @@ class BaseDigitInputState extends State<BaseDigitInput> {
 
       if (widget.nextFocusNode != null) {
         widget.nextFocusNode!.requestFocus();
-      } else {
-        widget.focusNode!.unfocus();
       }
     }
   }

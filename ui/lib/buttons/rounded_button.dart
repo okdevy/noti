@@ -11,19 +11,19 @@ class RoundedButton extends StatelessWidget {
     this.height = 56,
     this.borderRadius = const BorderRadius.all(Radius.circular(12)),
     this.elevation = 0,
+    this.icon,
     super.key,
   });
 
   final Color? borderColor;
   final Color? foregroundColor;
   final Color? backgroundColor;
-
   final double width;
   final double height;
   final BorderRadius borderRadius;
   final String title;
   final double elevation;
-
+  final Widget? icon;
   final VoidCallback? onPressed;
 
   @override
@@ -35,6 +35,10 @@ class RoundedButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: borderRadius,
       ),
+      textStyle: const TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
     );
 
     return ConstrainedBox(
@@ -44,11 +48,18 @@ class RoundedButton extends StatelessWidget {
         maxWidth: width,
         minWidth: 200,
       ),
-      child: ElevatedButton(
-        style: newStyle,
-        onPressed: onPressed,
-        child: Text(title),
-      ),
+      child: icon == null
+          ? ElevatedButton(
+              style: newStyle,
+              onPressed: onPressed,
+              child: Text(title),
+            )
+          : ElevatedButton.icon(
+              style: newStyle,
+              onPressed: onPressed,
+              icon: icon!,
+              label: Text(title),
+            ),
     );
   }
 }
