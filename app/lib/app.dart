@@ -1,6 +1,5 @@
 import 'package:async_redux/async_redux.dart';
 import 'package:business/redux/app_state.dart';
-import 'package:business/redux/session/session_selectors.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -57,9 +56,9 @@ class _Factory extends VmFactory<AppState, AppConnector, _Vm> {
 
   @override
   _Vm fromStore() {
-    if (selectIsSessionAvailable(state)) {
-      return _Vm(flow: const HomeFlow());
-    }
+    // if (selectIsSessionAvailable(state)) {
+    return _Vm(flow: const HomeFlow());
+    // }
 
     return _Vm(
       flow: const AuthFlow(

@@ -22,42 +22,82 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(value) => "Minimum length ${value} symbols";
 
+  static String m1(value) => "Select trigger ${value}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addNewNotification":
+            MessageLookupByLibrary.simpleMessage("Add new notification"),
+        "alarm": MessageLookupByLibrary.simpleMessage("⏰ Alarm"),
+        "allTriggers": MessageLookupByLibrary.simpleMessage("All Triggers"),
+        "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "backToLogIn": MessageLookupByLibrary.simpleMessage("Back to logIn"),
+        "backgroundColors":
+            MessageLookupByLibrary.simpleMessage("Background colors"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "couldNotConnectToInternet": MessageLookupByLibrary.simpleMessage(
             "Couldn\'t connect to internet."),
+        "dinner": MessageLookupByLibrary.simpleMessage("🍜 Dinner"),
+        "doYouWantToDiscardUnsavedChanges":
+            MessageLookupByLibrary.simpleMessage(
+                "Do you want to discard unsaved changes?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailInvalid":
             MessageLookupByLibrary.simpleMessage("Email is invalid"),
+        "enterMessage": MessageLookupByLibrary.simpleMessage("Enter message"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password ?"),
+        "icon": MessageLookupByLibrary.simpleMessage("Icon"),
+        "iconStyle": MessageLookupByLibrary.simpleMessage("Icon style"),
         "invalidEmail": MessageLookupByLibrary.simpleMessage("Invalid email"),
         "logIn": MessageLookupByLibrary.simpleMessage("Log in"),
         "logInDescription": MessageLookupByLibrary.simpleMessage(
             "Enter current time in hh : mm format"),
+        "message": MessageLookupByLibrary.simpleMessage("Message"),
+        "messageColon": MessageLookupByLibrary.simpleMessage("Message: "),
         "minimumLengthSymbols": m0,
         "mustContainAtLeastOneLowercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one lowercase"),
         "mustContainAtLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
             "Must contain at least one uppercase"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
+        "notificationDeleted":
+            MessageLookupByLibrary.simpleMessage("Notification deleted"),
+        "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "oneMinute": MessageLookupByLibrary.simpleMessage("1 minute"),
+        "oneTime": MessageLookupByLibrary.simpleMessage("One-time"),
+        "party": MessageLookupByLibrary.simpleMessage("🎉 Party"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
         "pleaseCheckYorNetworkSettings": MessageLookupByLibrary.simpleMessage(
             "Please check yor network settings."),
+        "recurring": MessageLookupByLibrary.simpleMessage("Recurring"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "requiredField": MessageLookupByLibrary.simpleMessage("Required field"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "selectIcon": MessageLookupByLibrary.simpleMessage("Select icon"),
+        "selectIcons": MessageLookupByLibrary.simpleMessage("Select icons"),
+        "selectTrigger": m1,
+        "selectTrigger1":
+            MessageLookupByLibrary.simpleMessage("Select trigger 1"),
+        "selectTrigger2":
+            MessageLookupByLibrary.simpleMessage("Select trigger 2"),
+        "sport": MessageLookupByLibrary.simpleMessage("Sport"),
         "theTimeIsWrongTryAgain": MessageLookupByLibrary.simpleMessage(
             "The time is wrong. Try again."),
         "thisFieldIsRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
-        "title": MessageLookupByLibrary.simpleMessage("title")
+        "threeMinutes": MessageLookupByLibrary.simpleMessage("3 minutes"),
+        "time": MessageLookupByLibrary.simpleMessage("Time: "),
+        "title": MessageLookupByLibrary.simpleMessage("title"),
+        "twoMinutes": MessageLookupByLibrary.simpleMessage("2 minutes"),
+        "typeTime": MessageLookupByLibrary.simpleMessage("Type time"),
+        "work": MessageLookupByLibrary.simpleMessage("Work"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

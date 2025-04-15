@@ -289,6 +289,316 @@ class S {
       args: [],
     );
   }
+
+  /// `Notifications`
+  String get notifications {
+    return Intl.message(
+      'Notifications',
+      name: 'notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recurring`
+  String get recurring {
+    return Intl.message(
+      'Recurring',
+      name: 'recurring',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One-time`
+  String get oneTime {
+    return Intl.message(
+      'One-time',
+      name: 'oneTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add new notification`
+  String get addNewNotification {
+    return Intl.message(
+      'Add new notification',
+      name: 'addNewNotification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time: `
+  String get time {
+    return Intl.message(
+      'Time: ',
+      name: 'time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message: `
+  String get messageColon {
+    return Intl.message(
+      'Message: ',
+      name: 'messageColon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select trigger 1`
+  String get selectTrigger1 {
+    return Intl.message(
+      'Select trigger 1',
+      name: 'selectTrigger1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select trigger 2`
+  String get selectTrigger2 {
+    return Intl.message(
+      'Select trigger 2',
+      name: 'selectTrigger2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message`
+  String get message {
+    return Intl.message(
+      'Message',
+      name: 'message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter message`
+  String get enterMessage {
+    return Intl.message(
+      'Enter message',
+      name: 'enterMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Type time`
+  String get typeTime {
+    return Intl.message(
+      'Type time',
+      name: 'typeTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Icon`
+  String get icon {
+    return Intl.message(
+      'Icon',
+      name: 'icon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select icon`
+  String get selectIcon {
+    return Intl.message(
+      'Select icon',
+      name: 'selectIcon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Icon style`
+  String get iconStyle {
+    return Intl.message(
+      'Icon style',
+      name: 'iconStyle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Background colors`
+  String get backgroundColors {
+    return Intl.message(
+      'Background colors',
+      name: 'backgroundColors',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select icons`
+  String get selectIcons {
+    return Intl.message(
+      'Select icons',
+      name: 'selectIcons',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure?`
+  String get areYouSure {
+    return Intl.message(
+      'Are you sure?',
+      name: 'areYouSure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to discard unsaved changes?`
+  String get doYouWantToDiscardUnsavedChanges {
+    return Intl.message(
+      'Do you want to discard unsaved changes?',
+      name: 'doYouWantToDiscardUnsavedChanges',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notification deleted`
+  String get notificationDeleted {
+    return Intl.message(
+      'Notification deleted',
+      name: 'notificationDeleted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1 minute`
+  String get oneMinute {
+    return Intl.message(
+      '1 minute',
+      name: 'oneMinute',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2 minutes`
+  String get twoMinutes {
+    return Intl.message(
+      '2 minutes',
+      name: 'twoMinutes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `3 minutes`
+  String get threeMinutes {
+    return Intl.message(
+      '3 minutes',
+      name: 'threeMinutes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select trigger {value}`
+  String selectTrigger(Object value) {
+    return Intl.message(
+      'Select trigger $value',
+      name: 'selectTrigger',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `All Triggers`
+  String get allTriggers {
+    return Intl.message(
+      'All Triggers',
+      name: 'allTriggers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `⏰ Alarm`
+  String get alarm {
+    return Intl.message(
+      '⏰ Alarm',
+      name: 'alarm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `🎉 Party`
+  String get party {
+    return Intl.message(
+      '🎉 Party',
+      name: 'party',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `🍜 Dinner`
+  String get dinner {
+    return Intl.message(
+      '🍜 Dinner',
+      name: 'dinner',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sport`
+  String get sport {
+    return Intl.message(
+      'Sport',
+      name: 'sport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Work`
+  String get work {
+    return Intl.message(
+      'Work',
+      name: 'work',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

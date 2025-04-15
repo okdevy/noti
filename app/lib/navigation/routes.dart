@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ui/pages/splash_page.dart';
 
+import '../connectors/create_one_time_notification_page_connector.dart';
 import '../connectors/forgot_password_page_connector.dart';
 import '../connectors/home_page_connector.dart';
-import '../connectors/log_in_page_connector.dart';
+import '../connectors/list_view_page_connector.dart';
+import '../connectors/log_in_with_time_page_connector.dart';
 import '../connectors/registration_page_connector.dart';
 import '../connectors/reset_password_page_connector.dart';
+import '../connectors/trigger_page_connector.dart';
 import '../dialogs/exception_dialog.dart';
+import 'route_params.dart';
 import 'routers_flow.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
@@ -20,6 +24,9 @@ class Routes {
   static const login = 'login';
   static const registration = 'registration';
   static const forgotPassword = 'forgotPassword';
+  static const createOneTimeNotification = 'create-one-time-notification';
+  static const listPage = 'list-page';
+  static const selectTrigger = 'select-trigger';
 }
 
 GoRouter get router => RoutersMap.instance._currentRouter;
@@ -74,6 +81,53 @@ class RoutersMap {
               child:
                   const ExceptionDialog<AppState>(child: HomePageConnector()),
             ),
+            routes: [
+              GoRoute(
+                name: Routes.createOneTimeNotification,
+                path: 'create-one-time-notification',
+                pageBuilder: (context, state) => MaterialPage<void>(
+                  key: state.pageKey,
+                  fullscreenDialog: true,
+                  child: const ExceptionDialog<AppState>(
+                    child: CreateOneTimeNotificationPageConnector(),
+                  ),
+                ),
+              ),
+              GoRoute(
+                name: Routes.listPage,
+                path: 'list-page/:pageType',
+                pageBuilder: (context, state) {
+                  final params = ListViewRouteParams.withState(state);
+
+                  return MaterialPage<void>(
+                    key: state.pageKey,
+                    fullscreenDialog: true,
+                    child: ExceptionDialog<AppState>(
+                      child: ListViewPageConnector(
+                        pageType: params.pageType,
+                      ),
+                    ),
+                  );
+                },
+              ),
+              GoRoute(
+                name: Routes.selectTrigger,
+                path: 'select-trigger/:triggerType',
+                pageBuilder: (context, state) {
+                  final params = SelectTriggerRouteParams.withState(state);
+
+                  return MaterialPage<void>(
+                    key: state.pageKey,
+                    fullscreenDialog: true,
+                    child: ExceptionDialog<AppState>(
+                      child: TriggerPageConnector(
+                        triggerType: params.triggerType,
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ],
           ),
         ],
       );
@@ -97,7 +151,7 @@ class RoutersMap {
             name: Routes.login,
             path: '/',
             builder: (context, state) => const ExceptionDialog<AppState>(
-              child: LogInPageConnector(),
+              child: LogInWithTimePageConnector(),
             ),
             routes: [
               GoRoute(

@@ -1,0 +1,4 @@
+enum NotificationTypeEnum {
+  oneTime,
+  recurring,
+}

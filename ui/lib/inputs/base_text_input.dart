@@ -21,6 +21,8 @@ class BaseTextInput extends StatefulWidget {
     this.keyboardType,
     this.textAlignVertical,
     this.filled,
+    this.alignLabelWithHint,
+    this.textInputAction,
     this.maxLength,
     this.focusNode,
     this.inputFormatters,
@@ -45,6 +47,8 @@ class BaseTextInput extends StatefulWidget {
   final Widget? prefixIcon;
   final int? maxLength;
   final bool? filled;
+  final bool? alignLabelWithHint;
+  final TextInputAction? textInputAction;
   final TextAlignVertical? textAlignVertical;
   final TextInputType? keyboardType;
   final FocusNode? focusNode;
@@ -75,6 +79,7 @@ class BaseTextInputState extends State<BaseTextInput> {
 
   void _controllerChangeListener() {
     final text = _controller.text;
+
     final skip = widget.vm.value == null && text.isEmpty;
     if (widget.vm.value != text && !skip) {
       widget.vm.onChangedSync(text);
@@ -118,6 +123,7 @@ class BaseTextInputState extends State<BaseTextInput> {
         onSubmitted: widget.onSubmitted,
         autofillHints: widget.autofillHints,
         textAlignVertical: widget.textAlignVertical,
+        textInputAction: widget.textInputAction,
         decoration: InputDecoration(
           floatingLabelBehavior: widget.floatingLabelBehavior,
           fillColor: Colors.transparent,
@@ -128,6 +134,7 @@ class BaseTextInputState extends State<BaseTextInput> {
           helperText: widget.helperText,
           prefixText: widget.prefixText,
           prefixIcon: widget.prefixIcon,
+          alignLabelWithHint: widget.alignLabelWithHint,
           suffix: widget.suffix,
           suffixIcon: widget.obscureText
               ? IconButton(
