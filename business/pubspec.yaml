@@ -13,10 +13,13 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_dotenv: ^5.1.0
+  flutter_local_notifications: ^16.3.0
+  flutter_timezone: ^1.0.8
   freezed_annotation: ^2.4.1
   get_it: ^7.6.6
   http_client:
     path: ../http_client
+  intl: ^0.18.1
   logging: ^1.2.0
   models:
     path: ../models
@@ -28,4 +31,3 @@ dev_dependencies:
   freezed: ^2.4.6
   json_serializable: ^6.7.1
   pro_lints: ^2.0.2
-
